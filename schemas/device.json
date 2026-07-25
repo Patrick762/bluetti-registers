@@ -26,5 +26,9 @@
             "title": "Maximum number of battery packs connected to device",
             "minimum": 0
         }
-    }
+    },
+    "required": [
+        "name",
+        "fields"
+    ]
 }

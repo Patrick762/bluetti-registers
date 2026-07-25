@@ -26,5 +26,10 @@
                 "type": "string"
             }
         }
-    }
+    },
+    "required": [
+        "name",
+        "address",
+        "content"
+    ]
 }

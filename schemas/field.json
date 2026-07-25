@@ -5,20 +5,24 @@
     "title": "Field schema",
     "properties": {
         "name": {
-            "type": "string"
+            "type": "string",
+            "title": "Name of the field"
         },
         "address": {
-            "type": "integer"
+            "type": "integer",
+            "title": "Field address"
         },
         "content": {
             "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-types.json"
         },
         "length": {
             "type": "integer",
+            "title": "Data length if not set by content type",
             "minimum": 1
         },
         "options": {
             "type": "array",
+            "title": "Options for Enum and Select content types",
             "items": {
                 "type": "string"
             }

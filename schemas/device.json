@@ -4,22 +4,26 @@
     "title": "Device schema",
     "properties": {
         "name": {
-            "type": "string"
+            "type": "string",
+            "title": "Name of the device"
         },
         "fields": {
             "type": "array",
+            "title": "Device fields",
             "items": {
                 "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field.json"
             }
         },
         "pack-fields": {
             "type": "array",
+            "title": "Device battery pack fields",
             "items": {
                 "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field.json"
             }
         },
         "max-packs": {
             "type": "integer",
+            "title": "Maximum number of battery packs connected to device",
             "minimum": 0
         }
     }

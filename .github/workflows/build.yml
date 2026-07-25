@@ -42,7 +42,7 @@ jobs:
         -   name: Upload artifact
             uses: actions/upload-artifact@v7
             with:
-                name: full
+                name: full.json
                 path: ./full.json
         -   name: Release
             uses: softprops/action-gh-release@v3

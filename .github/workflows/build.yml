@@ -3,9 +3,7 @@ name: Python build json
 on:
     push:
         branches: [ "main" ]
-
-permissions:
-    contents: read
+        tags: "*"
 
 jobs:
     validate:

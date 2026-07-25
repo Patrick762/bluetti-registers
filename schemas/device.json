@@ -1,0 +1,26 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "title": "Device schema",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "fields": {
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field.json"
+            }
+        },
+        "pack-fields": {
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field.json"
+            }
+        },
+        "max-packs": {
+            "type": "integer",
+            "minimum": 0
+        }
+    }
+}

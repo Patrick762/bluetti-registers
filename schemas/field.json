@@ -20,11 +20,7 @@
             "minimum": 1
         },
         "options": {
-            "type": "array",
-            "title": "Options for Enum and Select content types",
-            "items": {
-                "type": "string"
-            }
+            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-enum.json"
         }
     },
     "required": [

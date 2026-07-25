@@ -1,0 +1,39 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "bluetti-field-enum",
+    "title": "Field options enum",
+    "anyOf": [
+        {
+            "type": "string",
+            "const": "charging_mode"
+        },
+        {
+            "type": "string",
+            "const": "display_mode"
+        },
+        {
+            "type": "string",
+            "const": "eco_mode"
+        },
+        {
+            "type": "string",
+            "const": "frequency_mode"
+        },
+        {
+            "type": "string",
+            "const": "led_mode"
+        },
+        {
+            "type": "string",
+            "const": "output_mode"
+        },
+        {
+            "type": "string",
+            "const": "split_phase_mode"
+        },
+        {
+            "type": "string",
+            "const": "ups_mode"
+        }
+    ]
+}

@@ -5,15 +5,14 @@
     "title": "Field schema",
     "properties": {
         "name": {
-            "type": "string",
-            "title": "Name of the field"
+            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-name.json"
         },
         "address": {
             "type": "integer",
             "title": "Field address"
         },
         "content": {
-            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-types.json"
+            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-type.json"
         },
         "length": {
             "type": "integer",

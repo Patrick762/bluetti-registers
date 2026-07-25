@@ -1,0 +1,367 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "bluetti-field-name",
+    "title": "Field name",
+    "anyOf": [
+        {
+            "type": "string",
+            "const": "ac_input_current"
+        },
+        {
+            "type": "string",
+            "const": "ac_input_frequency"
+        },
+        {
+            "type": "string",
+            "const": "ac_input_power"
+        },
+        {
+            "type": "string",
+            "const": "ac_input_voltage"
+        },
+        {
+            "type": "string",
+            "const": "ac_output_frequency"
+        },
+        {
+            "type": "string",
+            "const": "ac_output_mode"
+        },
+        {
+            "type": "string",
+            "const": "ac_output_on"
+        },
+        {
+            "type": "string",
+            "const": "ac_output_current"
+        },
+        {
+            "type": "string",
+            "const": "ac_output_power"
+        },
+        {
+            "type": "string",
+            "const": "ac_output_voltage"
+        },
+        {
+            "type": "string",
+            "const": "ac_p1_current"
+        },
+        {
+            "type": "string",
+            "const": "ac_p1_power"
+        },
+        {
+            "type": "string",
+            "const": "ac_p1_voltage"
+        },
+        {
+            "type": "string",
+            "const": "ac_p2_current"
+        },
+        {
+            "type": "string",
+            "const": "ac_p2_power"
+        },
+        {
+            "type": "string",
+            "const": "ac_p2_voltage"
+        },
+        {
+            "type": "string",
+            "const": "ac_p3_current"
+        },
+        {
+            "type": "string",
+            "const": "ac_p3_power"
+        },
+        {
+            "type": "string",
+            "const": "ac_p3_voltage"
+        },
+        {
+            "type": "string",
+            "const": "total_battery_percent"
+        },
+        {
+            "type": "string",
+            "const": "soc_range_end"
+        },
+        {
+            "type": "string",
+            "const": "soc_range_start"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_ac"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_charging_mode"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_dc"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_display_timeout"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_eco"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_eco_ac"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_eco_dc"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_eco_min_power_ac"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_eco_min_power_dc"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_eco_time_mode"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_eco_time_mode_ac"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_eco_time_mode_dc"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_generator"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_grid_stabilizing"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_led_mode"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_power_lifting"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_power_off"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_split_phase"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_split_phase_mode"
+        },
+        {
+            "type": "string",
+            "const": "ctrl_ups_mode"
+        },
+        {
+            "type": "string",
+            "const": "dc_input_current"
+        },
+        {
+            "type": "string",
+            "const": "dc_input_power"
+        },
+        {
+            "type": "string",
+            "const": "dc_input_voltage"
+        },
+        {
+            "type": "string",
+            "const": "dc_output_on"
+        },
+        {
+            "type": "string",
+            "const": "dc_output_power"
+        },
+        {
+            "type": "string",
+            "const": "device_type"
+        },
+        {
+            "type": "string",
+            "const": "device_sn"
+        },
+        {
+            "type": "string",
+            "const": "grid_frequency"
+        },
+        {
+            "type": "string",
+            "const": "grid_frequency_max_value"
+        },
+        {
+            "type": "string",
+            "const": "grid_frequency_min_value"
+        },
+        {
+            "type": "string",
+            "const": "grid_p1_current"
+        },
+        {
+            "type": "string",
+            "const": "grid_p1_power"
+        },
+        {
+            "type": "string",
+            "const": "grid_p1_voltage"
+        },
+        {
+            "type": "string",
+            "const": "grid_p2_current"
+        },
+        {
+            "type": "string",
+            "const": "grid_p2_power"
+        },
+        {
+            "type": "string",
+            "const": "grid_p2_voltage"
+        },
+        {
+            "type": "string",
+            "const": "grid_p3_current"
+        },
+        {
+            "type": "string",
+            "const": "grid_p3_power"
+        },
+        {
+            "type": "string",
+            "const": "grid_p3_voltage"
+        },
+        {
+            "type": "string",
+            "const": "grid_voltage_max_value"
+        },
+        {
+            "type": "string",
+            "const": "grid_voltage_min_value"
+        },
+        {
+            "type": "string",
+            "const": "internal_ac_frequency"
+        },
+        {
+            "type": "string",
+            "const": "internal_ac_voltage"
+        },
+        {
+            "type": "string",
+            "const": "internal_dc_input_current"
+        },
+        {
+            "type": "string",
+            "const": "internal_dc_input_power"
+        },
+        {
+            "type": "string",
+            "const": "internal_dc_input_voltage"
+        },
+        {
+            "type": "string",
+            "const": "power_generation"
+        },
+        {
+            "type": "string",
+            "const": "power_lifting_on"
+        },
+        {
+            "type": "string",
+            "const": "pv_s1_current"
+        },
+        {
+            "type": "string",
+            "const": "pv_s1_power"
+        },
+        {
+            "type": "string",
+            "const": "pv_s1_voltage"
+        },
+        {
+            "type": "string",
+            "const": "pv_s2_current"
+        },
+        {
+            "type": "string",
+            "const": "pv_s2_power"
+        },
+        {
+            "type": "string",
+            "const": "pv_s2_voltage"
+        },
+        {
+            "type": "string",
+            "const": "sm_p1_current"
+        },
+        {
+            "type": "string",
+            "const": "sm_p1_power"
+        },
+        {
+            "type": "string",
+            "const": "sm_p1_voltage"
+        },
+        {
+            "type": "string",
+            "const": "sm_p2_current"
+        },
+        {
+            "type": "string",
+            "const": "sm_p2_power"
+        },
+        {
+            "type": "string",
+            "const": "sm_p2_voltage"
+        },
+        {
+            "type": "string",
+            "const": "sm_p3_current"
+        },
+        {
+            "type": "string",
+            "const": "sm_p3_power"
+        },
+        {
+            "type": "string",
+            "const": "sm_p3_voltage"
+        },
+        {
+            "type": "string",
+            "const": "time_remaining"
+        },
+        {
+            "type": "string",
+            "const": "version_arm"
+        },
+        {
+            "type": "string",
+            "const": "version_bms"
+        },
+        {
+            "type": "string",
+            "const": "version_dsp"
+        },
+        {
+            "type": "string",
+            "const": "wifi_name"
+        }
+    ]
+}

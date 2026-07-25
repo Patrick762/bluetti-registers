@@ -1,0 +1,46 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "bluetti-field-types",
+    "anyOf": [
+        {
+            "type": "string",
+            "const": "bool"
+        },
+        {
+            "type": "string",
+            "const": "dec"
+        },
+        {
+            "type": "string",
+            "const": "enum"
+        },
+        {
+            "type": "string",
+            "const": "select"
+        },
+        {
+            "type": "string",
+            "const": "serial"
+        },
+        {
+            "type": "string",
+            "const": "string"
+        },
+        {
+            "type": "string",
+            "const": "swstring"
+        },
+        {
+            "type": "string",
+            "const": "switch"
+        },
+        {
+            "type": "string",
+            "const": "uint"
+        },
+        {
+            "type": "string",
+            "const": "version"
+        }
+    ]
+}

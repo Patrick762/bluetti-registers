@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "bluetti-field",
+    "type": "object",
+    "title": "Field schema",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "address": {
+            "type": "integer"
+        },
+        "content": {
+            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-types.json"
+        },
+        "length": {
+            "type": "integer",
+            "minimum": 1
+        },
+        "options": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

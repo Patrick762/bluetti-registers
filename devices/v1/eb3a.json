@@ -71,6 +71,12 @@
             "content": "switch"
         },
         {
+            "name": "ctrl_led_mode",
+            "address": 3034,
+            "content": "select",
+            "options": "led_mode"
+        },
+        {
             "name": "ctrl_power_off",
             "address": 3060,
             "content": "switch"
@@ -79,6 +85,18 @@
             "name": "ctrl_eco",
             "address": 3063,
             "content": "switch"
+        },
+        {
+            "name": "ctrl_eco_time_mode",
+            "address": 3064,
+            "content": "select",
+            "options": "eco_mode"
+        },
+        {
+            "name": "ctrl_charging_mode",
+            "address": 3065,
+            "content": "select",
+            "options": "charging_mode"
         },
         {
             "name": "ctrl_power_lifting",

@@ -43,5 +43,11 @@ jobs:
         -   name: Upload artifact
             uses: actions/upload-artifact@v7
             with:
-                name: all-devices.json
+                name: full
                 path: ./full.json
+        -   name: Release
+            uses: softprops/action-gh-release@v3
+            if: github.ref_type == 'tag'
+            with:
+                files: |
+                    full.json

@@ -4,17 +4,26 @@ import requests
 import json
 from jsonschema import validate
 
+from helpers import getDevices
+
 print("Loading device schema")
 
 schema = requests.get("https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json").json()
 
-print("Loading device definition for EB3A")
+print("Getting device files")
 
-with open("./devices/v1/eb3a.json") as f:
-    data = json.load(f)
+device_files = getDevices()
 
-print("Validating")
+for f in device_files:
+    print(f"Loading device definition {f}")
 
-validate(data, schema=schema)
+    with open(f) as f:
+        data = json.load(f)
 
-print("Validation complete")
+    print("Validating")
+
+    validate(data, schema=schema)
+
+    print("Device validation complete")
+
+print("Done")

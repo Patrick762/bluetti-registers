@@ -1,0 +1,8 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "title": "Devices list schema",
+    "items": {
+        "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json"
+    }
+}

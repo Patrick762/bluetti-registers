@@ -241,7 +241,8 @@
         {
             "name": "wifi_name",
             "address": 12002,
-            "content": "swstring"
+            "content": "swstring",
+            "length": 16
         }
     ]
 }

@@ -21,6 +21,18 @@
         },
         "options": {
             "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-enum.json"
+        },
+        "dec_scale": {
+            "type": "integer",
+            "title": "Scale for decimal fields"
+        },
+        "num_min": {
+            "type": "integer",
+            "title": "Minimum for numeric fields"
+        },
+        "num_max": {
+            "type": "integer",
+            "title": "Maximum for numeric fields"
         }
     },
     "required": [

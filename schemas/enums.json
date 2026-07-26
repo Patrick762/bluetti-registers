@@ -1,0 +1,89 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "bluetti-field-enum",
+    "title": "Field options enum",
+    "anyOf": [
+        {
+            "title": "Charging mode",
+            "type": "integer",
+            "enum": [
+                "standard",
+                "silent",
+                "turbo"
+            ]
+        },
+        {
+            "title": "Display mode",
+            "type": "integer",
+            "enum": [
+                "0",
+                "1",
+                "sec30",
+                "min1",
+                "min5",
+                "never"
+            ]
+        },
+        {
+            "title": "Eco mode",
+            "type": "integer",
+            "enum": [
+                "0",
+                "hours1",
+                "hours2",
+                "hours3",
+                "hours4"
+            ]
+        },
+        {
+            "title": "Frequency mode",
+            "type": "integer",
+            "enum": [
+                "0",
+                "h50",
+                "h60"
+            ]
+        },
+        {
+            "title": "LED mode",
+            "type": "integer",
+            "enum": [
+                "0",
+                "low",
+                "high",
+                "sos",
+                "off"
+            ]
+        },
+        {
+            "title": "Output mode",
+            "type": "integer",
+            "enum": [
+                "stop",
+                "inverter_output",
+                "bypass_output_c",
+                "bypass_output_d",
+                "load_matching"
+            ]
+        },
+        {
+            "title": "Split phase mode",
+            "type": "integer",
+            "enum": [
+                "slave",
+                "master"
+            ]
+        },
+        {
+            "title": "UPS mode",
+            "type": "integer",
+            "enum": [
+                "0",
+                "custom",
+                "pv_priority",
+                "standard",
+                "time_control"
+            ]
+        }
+    ]
+}

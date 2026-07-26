@@ -1,0 +1,247 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
+    "name": "EP600",
+    "fields": [
+        {
+            "name": "device_type",
+            "address": 110,
+            "content": "swstring",
+            "length": 6
+        },
+        {
+            "name": "device_sn",
+            "address": 116,
+            "content": "serial"
+        },
+        {
+            "name": "total_battery_percent",
+            "address": 102,
+            "content": "uint"
+        },
+        {
+            "name": "power_generation",
+            "address": 1202,
+            "content": "dec"
+        },
+        {
+            "name": "pv_s1_power",
+            "address": 1212,
+            "content": "uint"
+        },
+        {
+            "name": "pv_s1_voltage",
+            "address": 1213,
+            "content": "dec"
+        },
+        {
+            "name": "pv_s1_current",
+            "address": 1214,
+            "content": "dec"
+        },
+        {
+            "name": "pv_s2_power",
+            "address": 1220,
+            "content": "uint"
+        },
+        {
+            "name": "pv_s2_voltage",
+            "address": 1221,
+            "content": "dec"
+        },
+        {
+            "name": "pv_s2_current",
+            "address": 1222,
+            "content": "dec"
+        },
+        {
+            "name": "sm_p1_power",
+            "address": 1228,
+            "content": "uint"
+        },
+        {
+            "name": "sm_p1_voltage",
+            "address": 1229,
+            "content": "dec"
+        },
+        {
+            "name": "sm_p1_current",
+            "address": 1230,
+            "content": "uint"
+        },
+        {
+            "name": "sm_p2_power",
+            "address": 1236,
+            "content": "uint"
+        },
+        {
+            "name": "sm_p2_voltage",
+            "address": 1237,
+            "content": "dec"
+        },
+        {
+            "name": "sm_p2_current",
+            "address": 1238,
+            "content": "uint"
+        },
+        {
+            "name": "sm_p3_power",
+            "address": 1244,
+            "content": "uint"
+        },
+        {
+            "name": "sm_p3_voltage",
+            "address": 1245,
+            "content": "dec"
+        },
+        {
+            "name": "sm_p3_current",
+            "address": 1246,
+            "content": "uint"
+        },
+        {
+            "name": "grid_frequency",
+            "address": 1300,
+            "content": "dec"
+        },
+        {
+            "name": "grid_p1_power",
+            "address": 1313,
+            "content": "uint"
+        },
+        {
+            "name": "grid_p1_voltage",
+            "address": 1314,
+            "content": "dec"
+        },
+        {
+            "name": "grid_p1_current",
+            "address": 1315,
+            "content": "dec"
+        },
+        {
+            "name": "grid_p2_power",
+            "address": 1319,
+            "content": "uint"
+        },
+        {
+            "name": "grid_p2_voltage",
+            "address": 1320,
+            "content": "dec"
+        },
+        {
+            "name": "grid_p2_current",
+            "address": 1321,
+            "content": "dec"
+        },
+        {
+            "name": "grid_p3_power",
+            "address": 1325,
+            "content": "uint"
+        },
+        {
+            "name": "grid_p3_voltage",
+            "address": 1326,
+            "content": "dec"
+        },
+        {
+            "name": "grid_p3_current",
+            "address": 1327,
+            "content": "dec"
+        },
+        {
+            "name": "ac_output_frequency",
+            "address": 1500,
+            "content": "dec"
+        },
+        {
+            "name": "ac_p1_power",
+            "address": 1510,
+            "content": "uint"
+        },
+        {
+            "name": "ac_p1_voltage",
+            "address": 1511,
+            "content": "dec"
+        },
+        {
+            "name": "ac_p1_current",
+            "address": 1512,
+            "content": "dec"
+        },
+        {
+            "name": "ac_p2_power",
+            "address": 1517,
+            "content": "uint"
+        },
+        {
+            "name": "ac_p2_voltage",
+            "address": 1518,
+            "content": "dec"
+        },
+        {
+            "name": "ac_p2_current",
+            "address": 1519,
+            "content": "dec"
+        },
+        {
+            "name": "ac_p3_power",
+            "address": 1524,
+            "content": "uint"
+        },
+        {
+            "name": "ac_p3_voltage",
+            "address": 1525,
+            "content": "dec"
+        },
+        {
+            "name": "ac_p3_current",
+            "address": 1526,
+            "content": "dec"
+        },
+        {
+            "name": "ctrl_ac",
+            "address": 2011,
+            "content": "switch"
+        },
+        {
+            "name": "soc_range_start",
+            "address": 2022,
+            "content": "uint"
+        },
+        {
+            "name": "soc_range_end",
+            "address": 2023,
+            "content": "uint"
+        },
+        {
+            "name": "ctrl_generator",
+            "address": 2246,
+            "content": "bool"
+        },
+        {
+            "name": "grid_voltage_min_value",
+            "address": 2435,
+            "content": "dec"
+        },
+        {
+            "name": "grid_voltage_max_value",
+            "address": 2436,
+            "content": "dec"
+        },
+        {
+            "name": "grid_frequency_min_value",
+            "address": 2437,
+            "content": "dec"
+        },
+        {
+            "name": "grid_frequency_max_value",
+            "address": 2438,
+            "content": "dec"
+        },
+        {
+            "name": "wifi_name",
+            "address": 12002,
+            "content": "swstring"
+        }
+    ]
+}

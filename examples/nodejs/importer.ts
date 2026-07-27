@@ -25,7 +25,7 @@ function compileEnums(schema: JSONSchema): string {
 
         const name = e.title.trim().replaceAll(" ", "");
 
-        result += `enum ${name} {`;
+        result += `export enum ${name} {`;
 
         for (let i = 0; i < e.enum.length; i++) {
             const n = e.enum[i];

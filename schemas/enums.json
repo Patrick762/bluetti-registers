@@ -4,7 +4,7 @@
     "title": "Enums",
     "anyOf": [
         {
-            "title": "Charging mode",
+            "title": "Charging Mode",
             "type": "integer",
             "enum": [
                 "standard",
@@ -13,11 +13,11 @@
             ]
         },
         {
-            "title": "Display mode",
+            "title": "Display Mode",
             "type": "integer",
             "enum": [
-                "0",
-                "1",
+                0,
+                1,
                 "sec30",
                 "min1",
                 "min5",
@@ -25,10 +25,10 @@
             ]
         },
         {
-            "title": "Eco mode",
+            "title": "Eco Mode",
             "type": "integer",
             "enum": [
-                "0",
+                0,
                 "hours1",
                 "hours2",
                 "hours3",
@@ -36,19 +36,19 @@
             ]
         },
         {
-            "title": "Frequency mode",
+            "title": "Frequency Mode",
             "type": "integer",
             "enum": [
-                "0",
+                0,
                 "h50",
                 "h60"
             ]
         },
         {
-            "title": "LED mode",
+            "title": "Led Mode",
             "type": "integer",
             "enum": [
-                "0",
+                0,
                 "low",
                 "high",
                 "sos",
@@ -56,7 +56,7 @@
             ]
         },
         {
-            "title": "Output mode",
+            "title": "Output Mode",
             "type": "integer",
             "enum": [
                 "stop",
@@ -67,7 +67,7 @@
             ]
         },
         {
-            "title": "Split phase mode",
+            "title": "Split Phase Mode",
             "type": "integer",
             "enum": [
                 "slave",
@@ -75,10 +75,10 @@
             ]
         },
         {
-            "title": "UPS mode",
+            "title": "Ups Mode",
             "type": "integer",
             "enum": [
-                "0",
+                0,
                 "custom",
                 "pv_priority",
                 "standard",

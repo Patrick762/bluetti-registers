@@ -16,7 +16,9 @@
         {
             "name": "total_battery_percent",
             "address": 43,
-            "content": "uint"
+            "content": "uint",
+            "num_min": 0,
+            "num_max": 100
         },
         {
             "name": "dc_input_power",
@@ -51,7 +53,8 @@
         {
             "name": "power_generation",
             "address": 43,
-            "content": "dec"
+            "content": "dec",
+            "dec_scale": 1
         },
         {
             "name": "ac_output_mode",
@@ -61,37 +64,46 @@
         {
             "name": "internal_ac_voltage",
             "address": 71,
-            "content": "dec"
+            "content": "dec",
+            "dec_scale": 1
         },
         {
             "name": "internal_ac_frequency",
             "address": 74,
-            "content": "dec"
+            "content": "dec",
+            "dec_scale": 2
         },
         {
             "name": "ac_input_voltage",
             "address": 77,
-            "content": "dec"
+            "content": "dec",
+            "dec_scale": 1
         },
         {
             "name": "ac_input_frequency",
             "address": 80,
-            "content": "dec"
+            "content": "dec",
+            "dec_scale": 2
         },
         {
             "name": "pv_s1_voltage",
             "address": 86,
-            "content": "dec"
+            "content": "dec",
+            "dec_scale": 1
         },
         {
             "name": "pv_s1_power",
             "address": 87,
-            "content": "dec"
+            "content": "dec",
+            "dec_scale": 1,
+            "multipier": 10
         },
         {
             "name": "pv_s1_current",
             "address": 88,
-            "content": "dec"
+            "content": "dec",
+            "dec_scale": 2,
+            "multiplier": 10
         },
         {
             "name": "ctrl_ups_mode",
@@ -121,12 +133,16 @@
         {
             "name": "soc_range_start",
             "address": 3015,
-            "content": "uint"
+            "content": "uint",
+            "num_min": 0,
+            "num_max": 100
         },
         {
             "name": "soc_range_end",
             "address": 3016,
-            "content": "uint"
+            "content": "uint",
+            "num_min": 0,
+            "num_max": 100
         }
     ]
 }

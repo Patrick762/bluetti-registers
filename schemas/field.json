@@ -26,6 +26,10 @@
             "type": "integer",
             "title": "Scale for decimal fields"
         },
+        "multiplier": {
+            "type": "integer",
+            "title": "Multiplier for numeric fields"
+        },
         "num_min": {
             "type": "integer",
             "title": "Minimum for numeric fields"

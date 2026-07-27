@@ -16,7 +16,9 @@
         {
             "name": "total_battery_percent",
             "address": 102,
-            "content": "uint"
+            "content": "uint",
+            "num_min": 0,
+            "num_max": 100
         }
     ]
 }

@@ -16,7 +16,9 @@
         {
             "name": "total_battery_percent",
             "address": 43,
-            "content": "uint"
+            "content": "uint",
+            "num_min": 0,
+            "num_max": 100
         },
         {
             "name": "dc_input_power",
@@ -52,13 +54,13 @@
             "name": "ac_input_voltage",
             "address": 77,
             "content": "dec",
-            "length": 1
+            "dec_scale": 1
         },
         {
             "name": "dc_input_voltage",
             "address": 86,
             "content": "dec",
-            "length": 2
+            "dec_scale": 2
         },
         {
             "name": "ctrl_ac",

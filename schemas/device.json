@@ -25,6 +25,13 @@
             "type": "integer",
             "title": "Maximum number of battery packs connected to device",
             "minimum": 0
+        },
+        "contributors": {
+            "type": "array",
+            "title": "Contributors for this device",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "required": [

@@ -1,6 +1,9 @@
 {
     "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
     "name": "AC50B",
+    "contributors": [
+        "@goetzc"
+    ],
     "fields": [
         {
             "name": "d_time_remaining",

@@ -1,5 +1,8 @@
 {
     "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
     "name": "PR30V2",
+    "contributors": [
+        "@gentoo90"
+    ],
     "fields": []
 }

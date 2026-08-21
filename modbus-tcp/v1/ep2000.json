@@ -1,6 +1,10 @@
 {
     "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
     "name": "EP2000",
+    "contributors": [
+        "@Patrick762",
+        "@SelfmadestromDE"
+    ],
     "fields": [
         {
             "name": "d_num_inverters",

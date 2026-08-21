@@ -1,6 +1,10 @@
 {
     "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
     "name": "EL30V2",
+    "contributors": [
+        "@dgudim",
+        "@x3ccd4828"
+    ],
     "fields": [
         {
             "name": "d_time_remaining",

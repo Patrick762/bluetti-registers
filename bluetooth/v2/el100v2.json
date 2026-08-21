@@ -1,6 +1,9 @@
 {
     "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
     "name": "EL100V2",
+    "contributors": [
+        "@seaburger"
+    ],
     "fields": [
         {
             "name": "dc_o_p_total",

@@ -1,5 +1,8 @@
 {
     "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
     "name": "EP600",
+    "contributors": [
+        "@Patrick762"
+    ],
     "fields": []
 }

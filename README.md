@@ -5,7 +5,7 @@ Just import registers using the json file of a release.
 
 ## Naming convention for field names
 
-1. Type (PV/AC/Grid/Device/Battery) (short: pv/ac/g/d/b)
+1. Type (PV/AC/DC/Grid/Device/Battery) (short: pv/ac/dc/g/d/b)
 
 2. Phase/String/Battery number if available
 

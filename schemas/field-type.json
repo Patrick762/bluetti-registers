@@ -9,15 +9,7 @@
         },
         {
             "type": "string",
-            "const": "dec"
-        },
-        {
-            "type": "string",
             "const": "enum"
-        },
-        {
-            "type": "string",
-            "const": "select"
         },
         {
             "type": "string",
@@ -30,10 +22,6 @@
         {
             "type": "string",
             "const": "swstring"
-        },
-        {
-            "type": "string",
-            "const": "switch"
         },
         {
             "type": "string",

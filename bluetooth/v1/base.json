@@ -3,52 +3,57 @@
     "name": "V1 Base",
     "fields": [
         {
-            "name": "device_type",
+            "name": "d_inverter_type",
             "address": 10,
             "length": 6,
             "content": "string",
             "category": "diagnostic"
         },
         {
-            "name": "device_sn",
+            "name": "d_serial",
             "address": 17,
             "content": "serial",
             "category": "diagnostic"
         },
         {
-            "name": "total_battery_percent",
+            "name": "b_soc_total",
             "address": 43,
             "content": "uint",
+            "unit": "%",
             "num_min": 0,
             "num_max": 100,
             "state_class": "measurement",
             "device_class": "battery"
         },
         {
-            "name": "dc_input_power",
+            "name": "dc_i_p_total",
             "address": 36,
             "content": "uint",
+            "unit": "W",
             "state_class": "measurement",
             "device_class": "power"
         },
         {
-            "name": "ac_input_power",
+            "name": "ac_i_p_total",
             "address": 37,
             "content": "uint",
+            "unit": "W",
             "state_class": "measurement",
             "device_class": "power"
         },
         {
-            "name": "ac_output_power",
+            "name": "ac_o_p_total",
             "address": 38,
             "content": "uint",
+            "unit": "W",
             "state_class": "measurement",
             "device_class": "power"
         },
         {
-            "name": "dc_output_power",
+            "name": "dc_o_p_total",
             "address": 39,
             "content": "uint",
+            "unit": "W",
             "state_class": "measurement",
             "device_class": "power"
         }

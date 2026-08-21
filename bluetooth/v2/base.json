@@ -3,20 +3,20 @@
     "name": "V2 Base",
     "fields": [
         {
-            "name": "device_type",
+            "name": "d_inverter_type",
             "address": 110,
             "length": 6,
             "content": "swstring",
             "category": "diagnostic"
         },
         {
-            "name": "device_sn",
+            "name": "d_serial",
             "address": 116,
             "content": "serial",
             "category": "diagnostic"
         },
         {
-            "name": "total_battery_percent",
+            "name": "b_soc_total",
             "address": 102,
             "content": "uint",
             "num_min": 0,

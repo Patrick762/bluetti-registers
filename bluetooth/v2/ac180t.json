@@ -1,5 +1,101 @@
 {
     "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
     "name": "AC180T",
-    "fields": []
+    "fields": [
+        {
+            "name": "dc_o_p_total",
+            "address": 140,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_o_p_total",
+            "address": 142,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "dc_i_p_total",
+            "address": 144,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_i_p_total",
+            "address": 146,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "dc_i_v",
+            "address": 1213,
+            "content": "uint",
+            "unit": "V",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "voltage"
+        },
+        {
+            "name": "dc_i_c",
+            "address": 1214,
+            "content": "uint",
+            "unit": "A",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "current"
+        },
+        {
+            "name": "g_i_f",
+            "address": 1300,
+            "content": "uint",
+            "unit": "Hz",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "frequency"
+        },
+        {
+            "name": "ac_i_v",
+            "address": 1314,
+            "content": "uint",
+            "unit": "V",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "voltage"
+        },
+        {
+            "name": "ac_i_c",
+            "address": 1315,
+            "content": "uint",
+            "unit": "A",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "current"
+        },
+        {
+            "name": "ac_o_f",
+            "address": 1500,
+            "content": "uint",
+            "unit": "Hz",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "frequency"
+        },
+        {
+            "name": "ac_o_v",
+            "address": 1511,
+            "content": "uint",
+            "unit": "V",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "voltage"
+        }
+    ]
 }

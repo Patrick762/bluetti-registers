@@ -1,5 +1,74 @@
 {
     "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
     "name": "AC180P",
-    "fields": []
+    "fields": [
+        {
+            "name": "dc_o_p_total",
+            "address": 140,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_o_p_total",
+            "address": 142,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "dc_i_p_total",
+            "address": 144,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_i_p_total",
+            "address": 146,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_i_v",
+            "address": 1314,
+            "content": "uint",
+            "unit": "V",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "voltage"
+        },
+        {
+            "name": "ac_o_switch",
+            "address": 2011,
+            "content": "bool",
+            "writable": true
+        },
+        {
+            "name": "dc_o_switch",
+            "address": 2012,
+            "content": "bool",
+            "writable": true
+        },
+        {
+            "name": "d_charging_mode",
+            "address": 2020,
+            "content": "enum",
+            "options": "charging_mode",
+            "writable": true,
+            "category": "config"
+        },
+        {
+            "name": "ac_power_lifting_switch",
+            "address": 2021,
+            "content": "bool",
+            "writable": true,
+            "category": "config"
+        }
+    ]
 }

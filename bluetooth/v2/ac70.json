@@ -125,7 +125,7 @@
         },
         {
             "name": "dc_eco_mode",
-            "address": 2016,
+            "address": 2015,
             "content": "enum",
             "options": "eco_mode",
             "writable": true,

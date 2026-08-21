@@ -313,7 +313,7 @@
             "category": "diagnostic"
         },
         {
-            "name": "d_battery_type",
+            "name": "b_type",
             "address": 51200,
             "content": "string",
             "length": 6,

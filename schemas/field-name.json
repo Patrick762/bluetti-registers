@@ -5,19 +5,23 @@
     "anyOf": [
         {
             "type": "string",
-            "const": "ac_o_p_total"
+            "const": "ac_o_p_total",
+            "title": "Total AC power output"
         },
         {
             "type": "string",
-            "const": "ac_i_p_total"
+            "const": "ac_i_p_total",
+            "title": "Total AC power input"
         },
         {
             "type": "string",
-            "const": "ac_o_e_total"
+            "const": "ac_o_e_total",
+            "title": "Total AC energy output"
         },
         {
             "type": "string",
-            "const": "ac_o_switch"
+            "const": "ac_o_switch",
+            "title": "AC output switch"
         },
         {
             "type": "string",

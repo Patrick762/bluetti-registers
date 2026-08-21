@@ -42,6 +42,18 @@
         {
             "type": "string",
             "const": "version"
+        },
+        {
+            "type": "string",
+            "const": "uint16"
+        },
+        {
+            "type": "string",
+            "const": "int16"
+        },
+        {
+            "type": "string",
+            "const": "uint32"
         }
     ]
 }

@@ -22,13 +22,9 @@
         "options": {
             "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-enum.json"
         },
-        "dec_scale": {
+        "scale": {
             "type": "integer",
-            "title": "Scale for decimal fields"
-        },
-        "multiplier": {
-            "type": "integer",
-            "title": "Multiplier for numeric fields"
+            "title": "Scale for fields (multiplies with value)"
         },
         "num_min": {
             "type": "integer",
@@ -37,6 +33,15 @@
         "num_max": {
             "type": "integer",
             "title": "Maximum for numeric fields"
+        },
+        "category": {
+            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-category.json"
+        },
+        "state_class": {
+            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-state-class.json"
+        },
+        "device_class": {
+            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-device-class.json"
         }
     },
     "required": [

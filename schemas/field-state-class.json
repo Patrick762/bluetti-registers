@@ -1,0 +1,15 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "bluetti-field-state-class",
+    "title": "Field state class",
+    "anyOf": [
+        {
+            "type": "string",
+            "const": "measurement"
+        },
+        {
+            "type": "string",
+            "const": "total_increasing"
+        }
+    ]
+}

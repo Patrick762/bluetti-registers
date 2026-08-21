@@ -362,6 +362,10 @@
         {
             "type": "string",
             "const": "wifi_name"
+        },
+        {
+            "type": "string",
+            "const": "d_num_inverters"
         }
     ]
 }

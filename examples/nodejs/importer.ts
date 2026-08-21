@@ -1,9 +1,9 @@
 import fs from "fs";
 import { compile, JSONSchema } from "json-schema-to-typescript";
 
-const tag = "0.0.8";
+const tag = "0.0.10";
 
-const url = `https://github.com/Patrick762/bluetti-registers/releases/download/${tag}/full.json`
+const url = `https://github.com/Patrick762/bluetti-registers/releases/download/${tag}/bluetooth.json`
 const schema = `https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/tags/${tag}/schemas/all-devices.json`;
 const enums = `https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/tags/${tag}/schemas/enums.json`;
 

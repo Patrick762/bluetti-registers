@@ -1,10 +1,8 @@
-#!/bin/python3
-
 import requests
 import json
 from jsonschema import validate
 
-from helpers import getDevices
+from helpers import getDevicesBluetooth
 
 print("Loading devices list schema")
 
@@ -12,7 +10,7 @@ schema = requests.get("https://raw.githubusercontent.com/Patrick762/bluetti-regi
 
 print("Getting device files")
 
-device_files = getDevices()
+device_files = getDevicesBluetooth()
 
 result = []
 
@@ -32,7 +30,7 @@ validate(result, schema=schema)
 
 print("Writing result to file")
 
-with open("./full.json", "w") as f:
+with open("./bluetooth.json", "w") as f:
     f.write(json.dumps(result))
 
 print("Done")

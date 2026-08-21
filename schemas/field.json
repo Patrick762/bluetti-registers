@@ -23,7 +23,7 @@
             "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-enum.json"
         },
         "scale": {
-            "type": "integer",
+            "type": "number",
             "title": "Scale for fields (multiplies with value)"
         },
         "num_min": {

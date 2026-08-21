@@ -38,6 +38,10 @@
             "type": "integer",
             "title": "Maximum for numeric fields"
         },
+        "writable": {
+            "type": "boolean",
+            "title": "Set to true if field is writeable"
+        },
         "category": {
             "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-category.json"
         },

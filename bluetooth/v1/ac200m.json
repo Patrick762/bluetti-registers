@@ -3,44 +3,6 @@
     "name": "AC200M",
     "fields": [
         {
-            "name": "device_type",
-            "address": 10,
-            "length": 6,
-            "content": "string"
-        },
-        {
-            "name": "device_sn",
-            "address": 17,
-            "content": "serial"
-        },
-        {
-            "name": "total_battery_percent",
-            "address": 43,
-            "content": "uint",
-            "num_min": 0,
-            "num_max": 100
-        },
-        {
-            "name": "dc_input_power",
-            "address": 36,
-            "content": "uint"
-        },
-        {
-            "name": "ac_input_power",
-            "address": 37,
-            "content": "uint"
-        },
-        {
-            "name": "ac_output_power",
-            "address": 38,
-            "content": "uint"
-        },
-        {
-            "name": "dc_output_power",
-            "address": 39,
-            "content": "uint"
-        },
-        {
             "name": "version_arm",
             "address": 23,
             "content": "version"

@@ -3,24 +3,6 @@
     "name": "EP600",
     "fields": [
         {
-            "name": "device_type",
-            "address": 110,
-            "content": "swstring",
-            "length": 6
-        },
-        {
-            "name": "device_sn",
-            "address": 116,
-            "content": "serial"
-        },
-        {
-            "name": "total_battery_percent",
-            "address": 102,
-            "content": "uint",
-            "num_min": 0,
-            "num_max": 100
-        },
-        {
             "name": "power_generation",
             "address": 1202,
             "content": "dec"

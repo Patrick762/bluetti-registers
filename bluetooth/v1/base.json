@@ -1,0 +1,56 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
+    "name": "V1 Base",
+    "fields": [
+        {
+            "name": "device_type",
+            "address": 10,
+            "length": 6,
+            "content": "string",
+            "category": "diagnostic"
+        },
+        {
+            "name": "device_sn",
+            "address": 17,
+            "content": "serial",
+            "category": "diagnostic"
+        },
+        {
+            "name": "total_battery_percent",
+            "address": 43,
+            "content": "uint",
+            "num_min": 0,
+            "num_max": 100,
+            "state_class": "measurement",
+            "device_class": "battery"
+        },
+        {
+            "name": "dc_input_power",
+            "address": 36,
+            "content": "uint",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_input_power",
+            "address": 37,
+            "content": "uint",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_output_power",
+            "address": 38,
+            "content": "uint",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "dc_output_power",
+            "address": 39,
+            "content": "uint",
+            "state_class": "measurement",
+            "device_class": "power"
+        }
+    ]
+}

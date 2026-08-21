@@ -195,6 +195,11 @@
         },
         {
             "type": "string",
+            "const": "d_charging_mode",
+            "title": "Device charging mode"
+        },
+        {
+            "type": "string",
             "const": "dc_i_p_total",
             "title": "Total DC power input"
         },

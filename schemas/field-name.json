@@ -366,6 +366,198 @@
         {
             "type": "string",
             "const": "d_num_inverters"
+        },
+        {
+            "type": "string",
+            "const": "ac_o_p_total"
+        },
+        {
+            "type": "string",
+            "const": "pv_i_p_total"
+        },
+        {
+            "type": "string",
+            "const": "g_i_p_total"
+        },
+        {
+            "type": "string",
+            "const": "d_inverter_total"
+        },
+        {
+            "type": "string",
+            "const": "pv_ac_p"
+        },
+        {
+            "type": "string",
+            "const": "ac_o_e_total"
+        },
+        {
+            "type": "string",
+            "const": "pv_i_e_total"
+        },
+        {
+            "type": "string",
+            "const": "g_i_e_total"
+        },
+        {
+            "type": "string",
+            "const": "g_o_e_total"
+        },
+        {
+            "type": "string",
+            "const": "pv_ac_e"
+        },
+        {
+            "type": "string",
+            "const": "d_inverter_status"
+        },
+        {
+            "type": "string",
+            "const": "d_inverter_warning"
+        },
+        {
+            "type": "string",
+            "const": "d_inverter_fault"
+        },
+        {
+            "type": "string",
+            "const": "d_inverter_type"
+        },
+        {
+            "type": "string",
+            "const": "g_i_f"
+        },
+        {
+            "type": "string",
+            "const": "pv_1_i_p"
+        },
+        {
+            "type": "string",
+            "const": "pv_1_i_v"
+        },
+        {
+            "type": "string",
+            "const": "pv_1_i_c"
+        },
+        {
+            "type": "string",
+            "const": "pv_2_i_p"
+        },
+        {
+            "type": "string",
+            "const": "pv_2_i_v"
+        },
+        {
+            "type": "string",
+            "const": "pv_2_i_c"
+        },
+        {
+            "type": "string",
+            "const": "pv_3_i_p"
+        },
+        {
+            "type": "string",
+            "const": "pv_3_i_v"
+        },
+        {
+            "type": "string",
+            "const": "pv_3_i_c"
+        },
+        {
+            "type": "string",
+            "const": "pv_4_i_p"
+        },
+        {
+            "type": "string",
+            "const": "pv_4_i_v"
+        },
+        {
+            "type": "string",
+            "const": "pv_4_i_c"
+        },
+        {
+            "type": "string",
+            "const": "ac_o_switch"
+        },
+        {
+            "type": "string",
+            "const": "g_i_switch"
+        },
+        {
+            "type": "string",
+            "const": "g_o_switch"
+        },
+        {
+            "type": "string",
+            "const": "b_soc_low"
+        },
+        {
+            "type": "string",
+            "const": "b_soc_high"
+        },
+        {
+            "type": "string",
+            "const": "d_num_battery_packs"
+        },
+        {
+            "type": "string",
+            "const": "b_v_total"
+        },
+        {
+            "type": "string",
+            "const": "b_c_total"
+        },
+        {
+            "type": "string",
+            "const": "b_soc_total"
+        },
+        {
+            "type": "string",
+            "const": "b_soh_total"
+        },
+        {
+            "type": "string",
+            "const": "d_battery_type"
+        },
+        {
+            "type": "string",
+            "const": "b_v"
+        },
+        {
+            "type": "string",
+            "const": "b_c"
+        },
+        {
+            "type": "string",
+            "const": "b_soc"
+        },
+        {
+            "type": "string",
+            "const": "b_soh"
+        },
+        {
+            "type": "string",
+            "const": "b_cycle_count"
+        },
+        {
+            "type": "string",
+            "const": "b_t_avg"
+        },
+        {
+            "type": "string",
+            "const": "b_cell_count"
+        },
+        {
+            "type": "string",
+            "const": "b_ntc_count"
+        },
+        {
+            "type": "string",
+            "const": "b_i_e"
+        },
+        {
+            "type": "string",
+            "const": "b_o_e"
         }
     ]
 }

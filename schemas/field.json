@@ -22,6 +22,10 @@
         "options": {
             "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-enum.json"
         },
+        "unit": {
+            "type": "string",
+            "title": "Measurement unit"
+        },
         "scale": {
             "type": "number",
             "title": "Scale for fields (multiplies with value)"

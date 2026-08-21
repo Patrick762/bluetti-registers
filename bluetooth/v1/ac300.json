@@ -54,7 +54,7 @@
             "name": "power_generation",
             "address": 43,
             "content": "dec",
-            "dec_scale": 1
+            "scale": 0.1
         },
         {
             "name": "ac_output_mode",
@@ -65,45 +65,42 @@
             "name": "internal_ac_voltage",
             "address": 71,
             "content": "dec",
-            "dec_scale": 1
+            "scale": 0.1
         },
         {
             "name": "internal_ac_frequency",
             "address": 74,
             "content": "dec",
-            "dec_scale": 2
+            "scale": 0.01
         },
         {
             "name": "ac_input_voltage",
             "address": 77,
             "content": "dec",
-            "dec_scale": 1
+            "scale": 0.1
         },
         {
             "name": "ac_input_frequency",
             "address": 80,
             "content": "dec",
-            "dec_scale": 2
+            "scale": 0.01
         },
         {
             "name": "pv_s1_voltage",
             "address": 86,
             "content": "dec",
-            "dec_scale": 1
+            "scale": 0.1
         },
         {
             "name": "pv_s1_power",
             "address": 87,
-            "content": "dec",
-            "dec_scale": 1,
-            "multipier": 10
+            "content": "uint"
         },
         {
             "name": "pv_s1_current",
             "address": 88,
             "content": "dec",
-            "dec_scale": 2,
-            "multiplier": 10
+            "scale": 0.1
         },
         {
             "name": "ctrl_ups_mode",

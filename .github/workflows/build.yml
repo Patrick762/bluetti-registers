@@ -39,14 +39,20 @@ jobs:
                 if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         -   name: Run generator
             run: python generate.py
-        -   name: Upload artifact
+        -   name: Upload bluetooth artifact
             uses: actions/upload-artifact@v7
             with:
                 name: bluetooth.json
                 path: ./bluetooth.json
+        -   name: Upload modbus-tcp artifact
+            uses: actions/upload-artifact@v7
+            with:
+                name: modbus-tcp.json
+                path: ./modbus-tcp.json
         -   name: Release
             uses: softprops/action-gh-release@v3
             if: github.ref_type == 'tag'
             with:
                 files: |
                     bluetooth.json
+                    modbus-tcp.json

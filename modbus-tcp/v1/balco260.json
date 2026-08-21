@@ -1,0 +1,11 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
+    "name": "Balco260",
+    "fields": [
+        {
+            "name": "d_num_inverters",
+            "address": 50001,
+            "content": "uint16"
+        }
+    ]
+}

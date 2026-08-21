@@ -54,13 +54,13 @@
             "name": "ac_input_voltage",
             "address": 77,
             "content": "dec",
-            "dec_scale": 1
+            "scale": 0.1
         },
         {
             "name": "dc_input_voltage",
             "address": 86,
             "content": "dec",
-            "dec_scale": 2
+            "scale": 0.01
         },
         {
             "name": "ctrl_ac",

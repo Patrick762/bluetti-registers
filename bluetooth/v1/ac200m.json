@@ -1,16 +1,5 @@
 {
     "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
     "name": "AC200M",
-    "fields": [
-        {
-            "name": "version_arm",
-            "address": 23,
-            "content": "version"
-        },
-        {
-            "name": "version_dsp",
-            "address": 25,
-            "content": "version"
-        }
-    ]
+    "fields": []
 }

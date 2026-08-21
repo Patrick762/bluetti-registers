@@ -105,7 +105,7 @@
             "address": 50023,
             "content": "enum",
             "options": "inverter_warning",
-            "count": 4,
+            "length": 4,
             "category": "diagnostic"
         },
         {
@@ -113,7 +113,7 @@
             "address": 50027,
             "content": "enum",
             "options": "inverter_fault",
-            "count": 5,
+            "length": 5,
             "category": "diagnostic"
         },
         {

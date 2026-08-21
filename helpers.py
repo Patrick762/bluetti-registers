@@ -17,7 +17,7 @@ def getDevicesV2Bluetooth():
     return filter(is_not_base, v2_devices)
 
 def getDevicesBluetooth():
-    return getDevicesV1Bluetooth() + getDevicesV2Bluetooth()
+    return list(getDevicesV1Bluetooth()) + list(getDevicesV2Bluetooth())
 
 def getBaseV1Bluetooth():
     v1_dir = "./bluetooth/v1"

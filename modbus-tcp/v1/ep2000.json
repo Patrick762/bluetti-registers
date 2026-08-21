@@ -1,0 +1,330 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
+    "name": "EP2000",
+    "fields": [
+        {
+            "name": "d_num_inverters",
+            "address": 50001,
+            "content": "uint16",
+            "category": "diagnostic"
+        },
+        {
+            "name": "ac_o_p_total",
+            "address": 50002,
+            "content": "uint16",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "pv_i_p_total",
+            "address": 50004,
+            "content": "uint16",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "g_i_p_total",
+            "address": 50006,
+            "content": "uint16",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "d_inverter_total",
+            "address": 50008,
+            "content": "uint16",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "pv_ac_p",
+            "address": 50010,
+            "content": "uint16",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_o_e_total",
+            "address": 50012,
+            "content": "uint16",
+            "unit": "kWh",
+            "scale": 0.1,
+            "state_class": "total_increasing",
+            "device_class": "energy"
+        },
+        {
+            "name": "pv_i_e_total",
+            "address": 50014,
+            "content": "uint16",
+            "unit": "kWh",
+            "scale": 0.1,
+            "state_class": "total_increasing",
+            "device_class": "energy"
+        },
+        {
+            "name": "pv_ac_e",
+            "address": 50020,
+            "content": "uint16",
+            "unit": "kWh",
+            "scale": 0.1,
+            "state_class": "total_increasing",
+            "device_class": "energy"
+        },
+        {
+            "name": "d_inverter_status",
+            "address": 50022,
+            "content": "enum",
+            "options": "inverter_status",
+            "category": "diagnostic"
+        },
+        {
+            "name": "d_inverter_warning",
+            "address": 50023,
+            "content": "enum",
+            "options": "inverter_warning",
+            "length": 4,
+            "category": "diagnostic"
+        },
+        {
+            "name": "d_inverter_fault",
+            "address": 50027,
+            "content": "enum",
+            "options": "inverter_fault",
+            "length": 5,
+            "category": "diagnostic"
+        },
+        {
+            "name": "d_inverter_type",
+            "address": 50200,
+            "content": "string",
+            "length": 6,
+            "category": "diagnostic"
+        },
+        {
+            "name": "g_i_f",
+            "address": 50214,
+            "content": "uint16",
+            "unit": "Hz",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "frequency"
+        },
+        {
+            "name": "pv_1_i_p",
+            "address": 50269,
+            "content": "uint16",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "pv_1_i_v",
+            "address": 50270,
+            "content": "uint16",
+            "unit": "V",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "voltage"
+        },
+        {
+            "name": "pv_1_i_c",
+            "address": 50271,
+            "content": "uint16",
+            "unit": "A",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "current"
+        },
+        {
+            "name": "pv_2_i_p",
+            "address": 50273,
+            "content": "uint16",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "pv_2_i_v",
+            "address": 50274,
+            "content": "uint16",
+            "unit": "V",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "voltage"
+        },
+        {
+            "name": "pv_2_i_c",
+            "address": 50275,
+            "content": "uint16",
+            "unit": "A",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "current"
+        },
+        {
+            "name": "ac_o_switch",
+            "address": 57001,
+            "content": "uint16",
+            "writable": true
+        },
+        {
+            "name": "g_i_switch",
+            "address": 57009,
+            "content": "uint16",
+            "writable": true,
+            "category": "diagnostic"
+        },
+        {
+            "name": "g_o_switch",
+            "address": 57010,
+            "content": "uint16",
+            "writable": true,
+            "category": "diagnostic"
+        },
+        {
+            "name": "b_soc_low",
+            "address": 57016,
+            "content": "uint16",
+            "writable": true,
+            "unit": "%",
+            "category": "diagnostic"
+        },
+        {
+            "name": "b_soc_high",
+            "address": 57017,
+            "content": "uint16",
+            "writable": true,
+            "unit": "%",
+            "category": "diagnostic"
+        },
+        {
+            "name": "d_num_battery_packs",
+            "address": 51001,
+            "content": "uint16",
+            "category": "diagnostic"
+        },
+        {
+            "name": "b_v_total",
+            "address": 51002,
+            "content": "uint16",
+            "unit": "V",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "voltage"
+        },
+        {
+            "name": "b_c_total",
+            "address": 51003,
+            "content": "uint16",
+            "unit": "A",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "current"
+        },
+        {
+            "name": "b_soc_total",
+            "address": 51004,
+            "content": "uint16",
+            "unit": "%",
+            "state_class": "measurement",
+            "device_class": "battery"
+        },
+        {
+            "name": "b_soh_total",
+            "address": 51005,
+            "content": "uint16",
+            "unit": "%",
+            "state_class": "measurement",
+            "category": "diagnostic"
+        },
+        {
+            "name": "b_type",
+            "address": 51200,
+            "content": "string",
+            "length": 6,
+            "category": "diagnostic"
+        },
+        {
+            "name": "b_v",
+            "address": 51219,
+            "content": "uint16",
+            "unit": "V",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "voltage"
+        },
+        {
+            "name": "b_c",
+            "address": 51220,
+            "content": "uint16",
+            "unit": "A",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "current"
+        },
+        {
+            "name": "b_soc",
+            "address": 51221,
+            "content": "uint16",
+            "unit": "%",
+            "state_class": "measurement",
+            "device_class": "battery"
+        },
+        {
+            "name": "b_soh",
+            "address": 51222,
+            "content": "uint16",
+            "unit": "%",
+            "category": "diagnostic"
+        },
+        {
+            "name": "b_cycle_count",
+            "address": 51223,
+            "content": "uint16",
+            "state_class": "measurement",
+            "category": "diagnostic"
+        },
+        {
+            "name": "b_t_avg",
+            "address": 51224,
+            "content": "int16",
+            "unit": "°C",
+            "state_class": "measurement",
+            "category": "diagnostic",
+            "device_class": "temperature"
+        },
+        {
+            "name": "b_cell_count",
+            "address": 51234,
+            "content": "uint16",
+            "category": "diagnostic"
+        },
+        {
+            "name": "b_ntc_count",
+            "address": 51235,
+            "content": "uint16",
+            "category": "diagnostic"
+        },
+        {
+            "name": "b_i_e",
+            "address": 51236,
+            "content": "uint32",
+            "unit": "Wh",
+            "state_class": "total_increasing",
+            "device_class": "energy"
+        },
+        {
+            "name": "b_o_e",
+            "address": 51238,
+            "content": "uint32",
+            "unit": "Wh",
+            "state_class": "total_increasing",
+            "device_class": "energy"
+        }
+    ]
+}

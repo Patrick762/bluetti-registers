@@ -59,7 +59,8 @@
             "name": "ac_power_lifting_switch",
             "address": 2021,
             "content": "bool",
-            "writable": true
+            "writable": true,
+            "category": "config"
         }
     ]
 }

@@ -1,5 +1,37 @@
 {
     "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
     "name": "AC50B",
-    "fields": []
+    "fields": [
+        {
+            "name": "d_time_remaining",
+            "address": 104,
+            "content": "uint",
+            "unit": "h",
+            "scale": 0.1
+        },
+        {
+            "name": "dc_o_p_total",
+            "address": 140,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_o_p_total",
+            "address": 142,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_i_p_total",
+            "address": 146,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        }
+    ]
 }

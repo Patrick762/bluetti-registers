@@ -15,6 +15,26 @@
         },
         {
             "type": "string",
+            "const": "ac_i_v",
+            "title": "AC input voltage"
+        },
+        {
+            "type": "string",
+            "const": "ac_i_c",
+            "title": "AC input current"
+        },
+        {
+            "type": "string",
+            "const": "ac_o_v",
+            "title": "AC output voltage"
+        },
+        {
+            "type": "string",
+            "const": "ac_o_f",
+            "title": "AC output frequency"
+        },
+        {
+            "type": "string",
             "const": "ac_o_e_total",
             "title": "Total AC energy output"
         },
@@ -27,6 +47,16 @@
             "type": "string",
             "const": "ac_power_lifting_switch",
             "title": "AC power lifting switch"
+        },
+        {
+            "type": "string",
+            "const": "ac_eco_switch",
+            "title": "AC Eco switch"
+        },
+        {
+            "type": "string",
+            "const": "ac_eco_mode",
+            "title": "AC Eco mode"
         },
         {
             "type": "string",
@@ -160,6 +190,11 @@
         },
         {
             "type": "string",
+            "const": "d_time_remaining",
+            "title": "Time Remaining"
+        },
+        {
+            "type": "string",
             "const": "dc_i_p_total",
             "title": "Total DC power input"
         },
@@ -170,8 +205,28 @@
         },
         {
             "type": "string",
+            "const": "dc_i_v",
+            "title": "DC input voltage"
+        },
+        {
+            "type": "string",
+            "const": "dc_i_c",
+            "title": "DC input current"
+        },
+        {
+            "type": "string",
             "const": "dc_o_switch",
             "title": "DC output switch"
+        },
+        {
+            "type": "string",
+            "const": "dc_eco_switch",
+            "title": "DC Eco switch"
+        },
+        {
+            "type": "string",
+            "const": "dc_eco_mode",
+            "title": "DC Eco mode"
         },
         {
             "type": "string",

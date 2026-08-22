@@ -222,3 +222,4 @@ __marimo__/
 bluetooth.json
 modbus-tcp.json
 blocks.json
+/*.csv

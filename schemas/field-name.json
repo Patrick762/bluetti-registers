@@ -60,6 +60,16 @@
         },
         {
             "type": "string",
+            "const": "ac_o_mode",
+            "title": "AC output mode"
+        },
+        {
+            "type": "string",
+            "const": "ac_ups_mode",
+            "title": "AC UPS mode"
+        },
+        {
+            "type": "string",
             "const": "b_soc_low",
             "title": "Battery SOC low threshold"
         },
@@ -197,6 +207,26 @@
             "type": "string",
             "const": "d_charging_mode",
             "title": "Device charging mode"
+        },
+        {
+            "type": "string",
+            "const": "d_power_off",
+            "title": "Device power off"
+        },
+        {
+            "type": "string",
+            "const": "d_display_mode",
+            "title": "Display mode"
+        },
+        {
+            "type": "string",
+            "const": "d_ver_arm",
+            "title": "ARM version"
+        },
+        {
+            "type": "string",
+            "const": "d_ver_dsp",
+            "title": "DSP version"
         },
         {
             "type": "string",

@@ -5,8 +5,18 @@
     "anyOf": [
         {
             "type": "string",
-            "const": "ac_o_p_total",
-            "title": "Total AC power output"
+            "const": "ac_eco_mode",
+            "title": "AC Eco mode"
+        },
+        {
+            "type": "string",
+            "const": "ac_eco_switch",
+            "title": "AC Eco switch"
+        },
+        {
+            "type": "string",
+            "const": "ac_i_c",
+            "title": "AC input current"
         },
         {
             "type": "string",
@@ -20,13 +30,8 @@
         },
         {
             "type": "string",
-            "const": "ac_i_c",
-            "title": "AC input current"
-        },
-        {
-            "type": "string",
-            "const": "ac_o_v",
-            "title": "AC output voltage"
+            "const": "ac_o_e_total",
+            "title": "Total AC energy output"
         },
         {
             "type": "string",
@@ -35,8 +40,13 @@
         },
         {
             "type": "string",
-            "const": "ac_o_e_total",
-            "title": "Total AC energy output"
+            "const": "ac_o_mode",
+            "title": "AC output mode"
+        },
+        {
+            "type": "string",
+            "const": "ac_o_p_total",
+            "title": "Total AC power output"
         },
         {
             "type": "string",
@@ -45,23 +55,13 @@
         },
         {
             "type": "string",
+            "const": "ac_o_v",
+            "title": "AC output voltage"
+        },
+        {
+            "type": "string",
             "const": "ac_power_lifting_switch",
             "title": "AC power lifting switch"
-        },
-        {
-            "type": "string",
-            "const": "ac_eco_switch",
-            "title": "AC Eco switch"
-        },
-        {
-            "type": "string",
-            "const": "ac_eco_mode",
-            "title": "AC Eco mode"
-        },
-        {
-            "type": "string",
-            "const": "ac_o_mode",
-            "title": "AC output mode"
         },
         {
             "type": "string",
@@ -70,18 +70,8 @@
         },
         {
             "type": "string",
-            "const": "b_soc_low",
-            "title": "Battery SOC low threshold"
-        },
-        {
-            "type": "string",
-            "const": "b_soc_high",
-            "title": "Battery SOC high threshold"
-        },
-        {
-            "type": "string",
-            "const": "b_v_total",
-            "title": "Total battery voltage"
+            "const": "b_c",
+            "title": "Battery current"
         },
         {
             "type": "string",
@@ -90,13 +80,63 @@
         },
         {
             "type": "string",
+            "const": "b_cell_count",
+            "title": "Battery cell count"
+        },
+        {
+            "type": "string",
+            "const": "b_cycle_count",
+            "title": "Battery cycle count"
+        },
+        {
+            "type": "string",
+            "const": "b_i_e",
+            "title": "Battery energy input"
+        },
+        {
+            "type": "string",
+            "const": "b_ntc_count",
+            "title": "Battery NTC count"
+        },
+        {
+            "type": "string",
+            "const": "b_o_e",
+            "title": "Battery energy output"
+        },
+        {
+            "type": "string",
+            "const": "b_soc",
+            "title": "Battery state of charge"
+        },
+        {
+            "type": "string",
+            "const": "b_soc_high",
+            "title": "Battery SOC high threshold"
+        },
+        {
+            "type": "string",
+            "const": "b_soc_low",
+            "title": "Battery SOC low threshold"
+        },
+        {
+            "type": "string",
             "const": "b_soc_total",
             "title": "Total battery state of charge"
         },
         {
             "type": "string",
+            "const": "b_soh",
+            "title": "Battery state of health"
+        },
+        {
+            "type": "string",
             "const": "b_soh_total",
             "title": "Total battery state of health"
+        },
+        {
+            "type": "string",
+            "const": "b_t_avg",
+            "title": "Battery average temperature"
         },
         {
             "type": "string",
@@ -110,68 +150,23 @@
         },
         {
             "type": "string",
-            "const": "b_c",
-            "title": "Battery current"
+            "const": "b_v_total",
+            "title": "Total battery voltage"
         },
         {
             "type": "string",
-            "const": "b_soc",
-            "title": "Battery state of charge"
+            "const": "d_charging_mode",
+            "title": "Device charging mode"
         },
         {
             "type": "string",
-            "const": "b_soh",
-            "title": "Battery state of health"
+            "const": "d_display_mode",
+            "title": "Display mode"
         },
         {
             "type": "string",
-            "const": "b_cycle_count",
-            "title": "Battery cycle count"
-        },
-        {
-            "type": "string",
-            "const": "b_t_avg",
-            "title": "Battery average temperature"
-        },
-        {
-            "type": "string",
-            "const": "b_cell_count",
-            "title": "Battery cell count"
-        },
-        {
-            "type": "string",
-            "const": "b_ntc_count",
-            "title": "Battery NTC count"
-        },
-        {
-            "type": "string",
-            "const": "b_i_e",
-            "title": "Battery energy input"
-        },
-        {
-            "type": "string",
-            "const": "b_o_e",
-            "title": "Battery energy output"
-        },
-        {
-            "type": "string",
-            "const": "d_num_inverters",
-            "title": "Number of inverters"
-        },
-        {
-            "type": "string",
-            "const": "d_inverter_total",
-            "title": "Total inverter power output"
-        },
-        {
-            "type": "string",
-            "const": "d_inverter_status",
-            "title": "Inverter status"
-        },
-        {
-            "type": "string",
-            "const": "d_inverter_warning",
-            "title": "Inverter warning"
+            "const": "d_i_e_total",
+            "title": "Total device energy input"
         },
         {
             "type": "string",
@@ -180,8 +175,23 @@
         },
         {
             "type": "string",
+            "const": "d_inverter_status",
+            "title": "Inverter status"
+        },
+        {
+            "type": "string",
+            "const": "d_inverter_total",
+            "title": "Total power output of all inverters"
+        },
+        {
+            "type": "string",
             "const": "d_inverter_type",
             "title": "Inverter type"
+        },
+        {
+            "type": "string",
+            "const": "d_inverter_warning",
+            "title": "Inverter warning"
         },
         {
             "type": "string",
@@ -190,8 +200,13 @@
         },
         {
             "type": "string",
-            "const": "d_i_e_total",
-            "title": "Total device energy input"
+            "const": "d_num_inverters",
+            "title": "Number of inverters"
+        },
+        {
+            "type": "string",
+            "const": "d_power_off",
+            "title": "Device power off"
         },
         {
             "type": "string",
@@ -205,21 +220,6 @@
         },
         {
             "type": "string",
-            "const": "d_charging_mode",
-            "title": "Device charging mode"
-        },
-        {
-            "type": "string",
-            "const": "d_power_off",
-            "title": "Device power off"
-        },
-        {
-            "type": "string",
-            "const": "d_display_mode",
-            "title": "Display mode"
-        },
-        {
-            "type": "string",
             "const": "d_ver_arm",
             "title": "ARM version"
         },
@@ -230,28 +230,8 @@
         },
         {
             "type": "string",
-            "const": "dc_i_p_total",
-            "title": "Total DC power input"
-        },
-        {
-            "type": "string",
-            "const": "dc_o_p_total",
-            "title": "Total DC power output"
-        },
-        {
-            "type": "string",
-            "const": "dc_i_v",
-            "title": "DC input voltage"
-        },
-        {
-            "type": "string",
-            "const": "dc_i_c",
-            "title": "DC input current"
-        },
-        {
-            "type": "string",
-            "const": "dc_o_switch",
-            "title": "DC output switch"
+            "const": "dc_eco_mode",
+            "title": "DC Eco mode"
         },
         {
             "type": "string",
@@ -260,13 +240,28 @@
         },
         {
             "type": "string",
-            "const": "dc_eco_mode",
-            "title": "DC Eco mode"
+            "const": "dc_i_c",
+            "title": "DC input current"
         },
         {
             "type": "string",
-            "const": "g_i_p_total",
-            "title": "Total grid power input"
+            "const": "dc_i_p_total",
+            "title": "Total DC power input"
+        },
+        {
+            "type": "string",
+            "const": "dc_i_v",
+            "title": "DC input voltage"
+        },
+        {
+            "type": "string",
+            "const": "dc_o_p_total",
+            "title": "Total DC power output"
+        },
+        {
+            "type": "string",
+            "const": "dc_o_switch",
+            "title": "DC output switch"
         },
         {
             "type": "string",
@@ -275,13 +270,13 @@
         },
         {
             "type": "string",
-            "const": "g_o_e_total",
-            "title": "Total grid energy output"
+            "const": "g_i_f",
+            "title": "Grid input frequency"
         },
         {
             "type": "string",
-            "const": "g_i_f",
-            "title": "Grid input frequency"
+            "const": "g_i_p_total",
+            "title": "Total grid power input"
         },
         {
             "type": "string",
@@ -290,28 +285,18 @@
         },
         {
             "type": "string",
+            "const": "g_o_e_total",
+            "title": "Total grid energy output"
+        },
+        {
+            "type": "string",
             "const": "g_o_switch",
             "title": "Grid output switch"
         },
         {
             "type": "string",
-            "const": "pv_i_p_total",
-            "title": "Total PV power input"
-        },
-        {
-            "type": "string",
-            "const": "pv_ac_p",
-            "title": "PV to AC power (direct)"
-        },
-        {
-            "type": "string",
-            "const": "pv_i_e_total",
-            "title": "Total PV energy input"
-        },
-        {
-            "type": "string",
-            "const": "pv_ac_e",
-            "title": "PV to AC energy (direct)"
+            "const": "pv_1_i_c",
+            "title": "PV 1 input current"
         },
         {
             "type": "string",
@@ -325,8 +310,8 @@
         },
         {
             "type": "string",
-            "const": "pv_1_i_c",
-            "title": "PV 1 input current"
+            "const": "pv_2_i_c",
+            "title": "PV 2 input current"
         },
         {
             "type": "string",
@@ -340,8 +325,8 @@
         },
         {
             "type": "string",
-            "const": "pv_2_i_c",
-            "title": "PV 2 input current"
+            "const": "pv_3_i_c",
+            "title": "PV 3 input current"
         },
         {
             "type": "string",
@@ -355,8 +340,8 @@
         },
         {
             "type": "string",
-            "const": "pv_3_i_c",
-            "title": "PV 3 input current"
+            "const": "pv_4_i_c",
+            "title": "PV 4 input current"
         },
         {
             "type": "string",
@@ -370,8 +355,23 @@
         },
         {
             "type": "string",
-            "const": "pv_4_i_c",
-            "title": "PV 4 input current"
+            "const": "pv_ac_e",
+            "title": "PV to AC energy (direct)"
+        },
+        {
+            "type": "string",
+            "const": "pv_ac_p",
+            "title": "PV to AC power (direct)"
+        },
+        {
+            "type": "string",
+            "const": "pv_i_e_total",
+            "title": "Total PV energy input"
+        },
+        {
+            "type": "string",
+            "const": "pv_i_p_total",
+            "title": "Total PV power input"
         }
     ]
 }

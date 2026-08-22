@@ -4,15 +4,17 @@ from os.path import join
 
 from helpers import create_field
 
+
 def by_addr(f):
     return f["address"]
+
 
 def generate(name: str, field_registers: dict[str, int], output_dir: str):
     obj = {
         "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
         "name": name,
         "contributors": [],
-        "fields": []
+        "fields": [],
     }
 
     fields = []
@@ -28,6 +30,7 @@ def generate(name: str, field_registers: dict[str, int], output_dir: str):
 
     with open(join(output_dir, name.lower() + ".json"), "w") as f:
         f.write(json.dumps(obj, indent=4))
+
 
 with open("modbus-tcp/v1/modbus-tcp.csv") as f:
     all = f.readlines()

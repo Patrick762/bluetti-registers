@@ -73,6 +73,7 @@ def checkSortedFieldAttributes(field) -> bool:
 
     return True
 
+
 def create_field(n: str):
     outp = {
         "name": n,

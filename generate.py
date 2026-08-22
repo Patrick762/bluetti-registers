@@ -2,11 +2,19 @@ import requests
 import json
 from jsonschema import validate
 
-from helpers import getDevicesModbusTcp, getDevicesV1Bluetooth, getDevicesV2Bluetooth, getBaseV1Bluetooth, getBaseV2Bluetooth
+from helpers import (
+    getDevicesModbusTcp,
+    getDevicesV1Bluetooth,
+    getDevicesV2Bluetooth,
+    getBaseV1Bluetooth,
+    getBaseV2Bluetooth,
+)
 
 print("Loading devices list schema")
 
-schema = requests.get("https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/all-devices.json").json()
+schema = requests.get(
+    "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/all-devices.json"
+).json()
 
 print("Getting device files")
 

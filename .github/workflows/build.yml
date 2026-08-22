@@ -37,8 +37,15 @@ jobs:
                 python -m pip install --upgrade pip
                 pip install flake8 pytest
                 if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        -   name: Run field generator
+            run: python generate-fields.py
         -   name: Run generator
             run: python generate.py
+        -   name: Upload fields artifact
+            uses: actions/upload-artifact@v7
+            with:
+                name: blocks.json
+                path: ./blocks.json
         -   name: Upload bluetooth artifact
             uses: actions/upload-artifact@v7
             with:
@@ -54,5 +61,6 @@ jobs:
             if: github.ref_type == 'tag'
             with:
                 files: |
+                    blocks.json
                     bluetooth.json
                     modbus-tcp.json

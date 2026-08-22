@@ -146,8 +146,8 @@
             "address": 2018,
             "content": "enum",
             "options": "eco_mode",
-            "writable": true,
-            "category": "config"
+            "category": "config",
+            "writable": true
         },
         {
             "name": "d_charging_mode",

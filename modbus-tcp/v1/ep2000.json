@@ -90,16 +90,16 @@
             "name": "d_inverter_warning",
             "address": 50023,
             "content": "enum",
-            "options": "inverter_warning",
             "length": 4,
+            "options": "inverter_warning",
             "category": "diagnostic"
         },
         {
             "name": "d_inverter_fault",
             "address": 50027,
             "content": "enum",
-            "options": "inverter_fault",
             "length": 5,
+            "options": "inverter_fault",
             "category": "diagnostic"
         },
         {
@@ -243,8 +243,8 @@
             "address": 51005,
             "content": "uint16",
             "unit": "%",
-            "state_class": "measurement",
-            "category": "diagnostic"
+            "category": "diagnostic",
+            "state_class": "measurement"
         },
         {
             "name": "b_type",
@@ -290,16 +290,16 @@
             "name": "b_cycle_count",
             "address": 51223,
             "content": "uint16",
-            "state_class": "measurement",
-            "category": "diagnostic"
+            "category": "diagnostic",
+            "state_class": "measurement"
         },
         {
             "name": "b_t_avg",
             "address": 51224,
             "content": "int16",
             "unit": "°C",
-            "state_class": "measurement",
             "category": "diagnostic",
+            "state_class": "measurement",
             "device_class": "temperature"
         },
         {

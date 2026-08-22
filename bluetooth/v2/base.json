@@ -5,8 +5,8 @@
         {
             "name": "d_inverter_type",
             "address": 110,
-            "length": 6,
             "content": "swstring",
+            "length": 6,
             "category": "diagnostic"
         },
         {

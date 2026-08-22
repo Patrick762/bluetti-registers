@@ -4,5 +4,92 @@
     "contributors": [
         "bluetti-mqtt"
     ],
-    "fields": []
+    "fields": [
+        {
+            "name": "d_ver_arm",
+            "address": 23,
+            "content": "version",
+            "category": "diagnostic"
+        },
+        {
+            "name": "d_ver_dsp",
+            "address": 25,
+            "content": "version",
+            "category": "diagnostic"
+        },
+        {
+            "name": "pv_i_e_total",
+            "address": 43,
+            "content": "uint",
+            "unit": "kWh",
+            "scale": 0.1,
+            "category": "diagnostic",
+            "state_class": "total_increasing",
+            "device_class": "energy"
+        },
+        {
+            "name": "ac_o_mode",
+            "address": 70,
+            "content": "enum",
+            "options": "output_mode",
+            "category": "diagnostic"
+        },
+        {
+            "name": "ac_i_v",
+            "address": 77,
+            "content": "uint",
+            "unit": "V",
+            "scale": 0.1,
+            "state_class": "measurement",
+            "device_class": "voltage"
+        },
+        {
+            "name": "ac_ups_mode",
+            "address": 3001,
+            "content": "enum",
+            "options": "ups_mode",
+            "category": "config",
+            "writable": true
+        },
+        {
+            "name": "ac_o_switch",
+            "address": 3007,
+            "content": "bool",
+            "writable": true
+        },
+        {
+            "name": "dc_o_switch",
+            "address": 3008,
+            "content": "bool",
+            "writable": true
+        },
+        {
+            "name": "b_soc_low",
+            "address": 3015,
+            "content": "uint",
+            "unit": "%",
+            "category": "diagnostic"
+        },
+        {
+            "name": "b_soc_high",
+            "address": 3016,
+            "content": "uint",
+            "unit": "%",
+            "category": "diagnostic"
+        },
+        {
+            "name": "d_power_off",
+            "address": 3060,
+            "content": "bool",
+            "writable": true
+        },
+        {
+            "name": "d_display_mode",
+            "address": 3061,
+            "content": "enum",
+            "options": "display_mode",
+            "writable": true,
+            "category": "config"
+        }
+    ]
 }

@@ -76,20 +76,6 @@
             "content": "uint",
             "unit": "%",
             "category": "diagnostic"
-        },
-        {
-            "name": "d_power_off",
-            "address": 3060,
-            "content": "bool",
-            "writable": true
-        },
-        {
-            "name": "d_display_mode",
-            "address": 3061,
-            "content": "enum",
-            "options": "display_mode",
-            "writable": true,
-            "category": "config"
         }
     ]
 }

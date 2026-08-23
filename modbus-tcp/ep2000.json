@@ -274,7 +274,6 @@
             "address": 51224,
             "content": "int",
             "unit": "\u00b0C",
-            "scale": 0.1,
             "state_class": "measurement",
             "device_class": "temperature"
         },

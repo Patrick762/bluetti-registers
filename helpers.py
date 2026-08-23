@@ -78,7 +78,6 @@ def create_field(n: str, com: str):
     elif "_t_" in n or n.endswith("_t"):
         outp["content"] = "int"
         outp["unit"] = "°C"
-        outp["scale"] = 0.1
         outp["state_class"] = "measurement"
         outp["device_class"] = "temperature"
     elif n.endswith("_switch"):

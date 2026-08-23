@@ -10,7 +10,7 @@ from helpers import (
 print("Loading devices list schema")
 
 schema = requests.get(
-    "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/all-devices.json"
+    "https://patrick762.github.io/bluetti-registers/all-devices.json"
 ).json()
 
 print("Getting device files")

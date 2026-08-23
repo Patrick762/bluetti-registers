@@ -5,14 +5,14 @@
     "title": "Field schema",
     "properties": {
         "name": {
-            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-name.json"
+            "$ref": "https://patrick762.github.io/bluetti-registers/field-name.json"
         },
         "address": {
             "type": "integer",
             "title": "Field address"
         },
         "content": {
-            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-type.json"
+            "$ref": "https://patrick762.github.io/bluetti-registers/field-type.json"
         },
         "length": {
             "type": "integer",
@@ -20,7 +20,7 @@
             "minimum": 1
         },
         "options": {
-            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-enum.json"
+            "$ref": "https://patrick762.github.io/bluetti-registers/field-enum.json"
         },
         "unit": {
             "type": "string",
@@ -43,13 +43,13 @@
             "title": "Set to true if field is writeable"
         },
         "category": {
-            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-category.json"
+            "$ref": "https://patrick762.github.io/bluetti-registers/field-category.json"
         },
         "state_class": {
-            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-state-class.json"
+            "$ref": "https://patrick762.github.io/bluetti-registers/field-state-class.json"
         },
         "device_class": {
-            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-device-class.json"
+            "$ref": "https://patrick762.github.io/bluetti-registers/field-device-class.json"
         }
     },
     "required": [

@@ -11,7 +11,7 @@
             "type": "array",
             "title": "Translations",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/translation.json"
+                "$ref": "https://patrick762.github.io/bluetti-registers/translation.json"
             }
         }
     },

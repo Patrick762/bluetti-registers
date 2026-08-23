@@ -5,7 +5,7 @@
     "title": "Field name translation",
     "properties": {
         "name": {
-            "$ref": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/field-name.json"
+            "$ref": "https://patrick762.github.io/bluetti-registers/field-name.json"
         },
         "text": {
             "type": "string"

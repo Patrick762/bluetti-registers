@@ -19,7 +19,7 @@ def generate(
         return
 
     obj = {
-        "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
+        "$schema": "https://patrick762.github.io/bluetti-registers/device.json",
         "name": name,
         "contributors": contributors,
         "fields": [],

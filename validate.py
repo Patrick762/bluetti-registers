@@ -7,7 +7,7 @@ from helpers import checkSortedFieldAttributes, getDevicesBluetooth, getDevicesM
 print("Loading device schema")
 
 schema = requests.get(
-    "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json"
+    "https://patrick762.github.io/bluetti-registers/device.json"
 ).json()
 
 print("Getting device files")

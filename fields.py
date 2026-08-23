@@ -25,7 +25,7 @@ ENUM_FIELDS = [
 ]
 
 
-def create_special_fields(n: str, field: dict[str, Any]):
+def create_special_fields(n: str, field: dict[str, Any], com: str):
     if n in AMOUNT_FIELDS:
         field["content"] = "uint"
         field["category"] = "diagnostic"
@@ -48,6 +48,7 @@ def create_special_fields(n: str, field: dict[str, Any]):
 
     if n in ENUM_FIELDS:
         field["content"] = "enum"
+        field["category"] = "diagnostic"
 
     match (n):
         case "d_inverter_total":
@@ -109,7 +110,26 @@ def create_special_fields(n: str, field: dict[str, Any]):
         case "d_led_mode":
             field["options"] = "led_mode"
 
-    if n in ENUM_FIELDS:
-        field["category"] = "diagnostic"
+    # Bluetooth register
+    if com == "b":
+        return field
+
+    # Modbus-TCP register
+
+    # voltage need scaling 0.1 on modbus-tcp
+    if "_v_" in n or n.endswith("_v"):
+        field["scale"] = 0.1
+
+    # enums need length on modbus-tcp
+    if n == "d_inverter_warning":
+        field["length"] = 4
+    if n == "d_inverter_fault":
+        field["length"] = 5
+
+    # b_i_e on modbus-tcp is Wh and needs no scale
+    # b_o_e on modbus-tcp is Wh and needs no scale
+    if n in ["b_i_e", "b_o_e"]:
+        del field["scale"]
+        field["unit"] = "Wh"
 
     return field

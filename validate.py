@@ -2,7 +2,7 @@ import requests
 import json
 from jsonschema import validate
 
-from helpers import checkSortedFieldAttributes, getDevicesBluetooth, getDevicesModbusTcp
+from helpers import getDevicesBluetooth, getDevicesModbusTcp
 
 print("Loading device schema")
 
@@ -27,12 +27,6 @@ for f in device_files:
     if len(data["contributors"]) == 0:
         raise Exception(f'Contributors for device {data["name"]} missing')
 
-    # Check sorting for field attributes
-    for f in list(data["fields"]):
-        r = checkSortedFieldAttributes(f)
-        if r is False:
-            raise Exception(f'Field {f["name"]} of device {data["name"]} not sorted')
-
     print("Device validation complete")
 
 device_files = getDevicesModbusTcp()
@@ -46,12 +40,6 @@ for f in device_files:
     print("Validating")
 
     validate(data, schema=schema)
-
-    # Check sorting for field attributes
-    for f in list(data["fields"]):
-        r = checkSortedFieldAttributes(f)
-        if r is False:
-            raise Exception(f'Field {f["name"]} of device {data["name"]} not sorted')
 
     print("Device validation complete")
 

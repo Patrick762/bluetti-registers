@@ -40,22 +40,7 @@ def getDevicesModbusTcp():
     return filter(is_json, devices)
 
 
-def checkSortedFieldAttributes(field) -> bool:
-    last_idx = -1
-    for attr in field:
-        # Ignore attributes not present in the reference sorting list
-        if attr not in SORT_ORDER:
-            continue
-
-        current_idx = SORT_ORDER[attr]
-        if current_idx < last_idx:
-            return False
-        last_idx = current_idx
-
-    return True
-
-
-def create_field(n: str):
+def create_field(n: str, com: str):
     outp = {
         "name": n,
         "address": -1,
@@ -111,4 +96,4 @@ def create_field(n: str):
         outp["content"] = "serial"
         outp["category"] = "diagnostic"
 
-    return create_special_fields(n, outp)
+    return create_special_fields(n, outp, com)

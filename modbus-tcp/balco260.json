@@ -105,22 +105,24 @@
             "name": "d_inverter_status",
             "address": 50022,
             "content": "enum",
-            "options": "inverter_status",
-            "category": "diagnostic"
+            "category": "diagnostic",
+            "options": "inverter_status"
         },
         {
             "name": "d_inverter_warning",
             "address": 50023,
             "content": "enum",
+            "category": "diagnostic",
             "options": "inverter_warning",
-            "category": "diagnostic"
+            "length": 4
         },
         {
             "name": "d_inverter_fault",
             "address": 50027,
             "content": "enum",
+            "category": "diagnostic",
             "options": "inverter_fault",
-            "category": "diagnostic"
+            "length": 5
         },
         {
             "name": "d_inverter_type",
@@ -152,7 +154,8 @@
             "content": "uint",
             "unit": "V",
             "state_class": "measurement",
-            "device_class": "voltage"
+            "device_class": "voltage",
+            "scale": 0.1
         },
         {
             "name": "pv_1_i_c",
@@ -177,7 +180,8 @@
             "content": "uint",
             "unit": "V",
             "state_class": "measurement",
-            "device_class": "voltage"
+            "device_class": "voltage",
+            "scale": 0.1
         },
         {
             "name": "pv_2_i_c",
@@ -202,7 +206,8 @@
             "content": "uint",
             "unit": "V",
             "state_class": "measurement",
-            "device_class": "voltage"
+            "device_class": "voltage",
+            "scale": 0.1
         },
         {
             "name": "pv_3_i_c",
@@ -227,7 +232,8 @@
             "content": "uint",
             "unit": "V",
             "state_class": "measurement",
-            "device_class": "voltage"
+            "device_class": "voltage",
+            "scale": 0.1
         },
         {
             "name": "pv_4_i_c",
@@ -250,7 +256,8 @@
             "content": "uint",
             "unit": "V",
             "state_class": "measurement",
-            "device_class": "voltage"
+            "device_class": "voltage",
+            "scale": 0.1
         },
         {
             "name": "b_c_total",
@@ -294,7 +301,8 @@
             "content": "uint",
             "unit": "V",
             "state_class": "measurement",
-            "device_class": "voltage"
+            "device_class": "voltage",
+            "scale": 0.1
         },
         {
             "name": "b_c",
@@ -335,7 +343,7 @@
         {
             "name": "b_t_avg",
             "address": 51224,
-            "content": "uint",
+            "content": "int",
             "unit": "\u00b0C",
             "scale": 0.1,
             "state_class": "measurement",
@@ -357,8 +365,7 @@
             "name": "b_i_e",
             "address": 51236,
             "content": "uint",
-            "unit": "kWh",
-            "scale": 0.1,
+            "unit": "Wh",
             "category": "diagnostic",
             "state_class": "total_increasing",
             "device_class": "energy"
@@ -367,8 +374,7 @@
             "name": "b_o_e",
             "address": 51238,
             "content": "uint",
-            "unit": "kWh",
-            "scale": 0.1,
+            "unit": "Wh",
             "category": "diagnostic",
             "state_class": "total_increasing",
             "device_class": "energy"

@@ -14,6 +14,7 @@ def generate(
     contributors: list[str],
     field_registers: dict[str, int],
     output_dir: str,
+    com: str = "b"
 ):
     if name == "":
         return
@@ -28,7 +29,7 @@ def generate(
     fields = []
 
     for n, a in field_registers.items():
-        field = create_field(n)
+        field = create_field(n, com)
         field["address"] = a
 
         fields.append(field)
@@ -57,7 +58,7 @@ with open("modbus-tcp/modbus-tcp.csv") as f:
                     continue
                 dev[str(header[idx]).strip()] = int(addr)
 
-        generate(name, contributors, dev, "modbus-tcp/")
+        generate(name, contributors, dev, "modbus-tcp/", "m")
 
 with open("bluetooth/bluetooth.csv") as f:
     all = f.readlines()
@@ -76,4 +77,4 @@ with open("bluetooth/bluetooth.csv") as f:
                     continue
                 dev[str(header[idx]).strip()] = int(addr)
 
-        generate(name, contributors, dev, "bluetooth/")
+        generate(name, contributors, dev, "bluetooth/", "b")

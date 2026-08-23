@@ -1,6 +1,8 @@
 from os import listdir
 from os.path import isfile, join
 
+from fields import create_special_fields
+
 field_sorting = [
     "name",
     "address",
@@ -130,4 +132,4 @@ def create_field(n: str):
         outp["content"] = "serial"
         outp["category"] = "diagnostic"
 
-    return outp
+    return create_special_fields(n, outp)

@@ -10,6 +10,9 @@ def by_addr(f):
 
 
 def generate(name: str, field_registers: dict[str, int], output_dir: str):
+    if name == "":
+        return
+
     obj = {
         "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
         "name": name,
@@ -32,7 +35,7 @@ def generate(name: str, field_registers: dict[str, int], output_dir: str):
         f.write(json.dumps(obj, indent=4))
 
 
-with open("modbus-tcp/v1/modbus-tcp.csv") as f:
+with open("modbus-tcp/modbus-tcp.csv") as f:
     all = f.readlines()
     header = all[0].split(",")
 
@@ -48,4 +51,22 @@ with open("modbus-tcp/v1/modbus-tcp.csv") as f:
                     continue
                 dev[str(header[idx]).strip()] = int(addr)
 
-        generate(name, dev, "modbus-tcp/v1/")
+        generate(name, dev, "modbus-tcp/")
+
+with open("bluetooth/bluetooth.csv") as f:
+    all = f.readlines()
+    header = all[0].split(",")
+
+    for line in all[1:]:
+        name = line.split(",")[0]
+        dev = {}
+        for idx, col in enumerate(line.split(",")):
+            if idx == 0:
+                continue
+            if col != "" and header[idx] != "":
+                addr = str(col).strip()
+                if addr == "":
+                    continue
+                dev[str(header[idx]).strip()] = int(addr)
+
+        generate(name, dev, "bluetooth/")

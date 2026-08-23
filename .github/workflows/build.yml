@@ -3,6 +3,10 @@ name: Python build json
 on:
     push:
         branches: [ "main" ]
+        paths:
+        - 'bluetooth/**'
+        - 'modbus-tcp/**'
+        - '*.py'
         tags:
             - "*"
 
@@ -45,24 +49,24 @@ jobs:
             uses: actions/upload-artifact@v7
             with:
                 name: bluetooth.json
-                path: ./bluetooth.json
+                path: ./out/bluetooth.json
         -   name: Upload modbus-tcp artifact
             uses: actions/upload-artifact@v7
             with:
                 name: modbus-tcp.json
-                path: ./modbus-tcp.json
+                path: ./out/modbus-tcp.json
         -   name: Release
             uses: softprops/action-gh-release@v3
             if: github.ref_type == 'tag'
             with:
                 files: |
-                    bluetooth.json
-                    modbus-tcp.json
+                    ./out/bluetooth.json
+                    ./out/modbus-tcp.json
         -   name: Upload artifacts
             uses: actions/upload-pages-artifact@v3
             with:
                 # Upload built json files
-                path: './*.json'
+                path: './out'
         -   name: Deploy to GitHub Pages
             id: deployment
             uses: actions/deploy-pages@v5

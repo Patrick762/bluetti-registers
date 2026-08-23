@@ -219,7 +219,5 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-bluetooth.json
-modbus-tcp.json
-blocks.json
+out/
 /*.csv

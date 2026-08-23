@@ -1,3 +1,4 @@
+import os
 import requests
 import json
 from jsonschema import validate
@@ -6,6 +7,9 @@ from helpers import (
     getDevicesModbusTcp,
     getDevicesBluetooth,
 )
+
+if not os.path.exists("out"):
+    os.makedirs("out")
 
 print("Loading devices list schema")
 
@@ -36,7 +40,7 @@ validate(result, schema=schema)
 
 print("Writing result to file")
 
-with open("./bluetooth.json", "w") as f:
+with open("./out/bluetooth.json", "w") as f:
     f.write(json.dumps(result))
 
 # region Modbus TCP
@@ -61,7 +65,7 @@ validate(result, schema=schema)
 
 print("Writing result to file")
 
-with open("./modbus-tcp.json", "w") as f:
+with open("./out/modbus-tcp.json", "w") as f:
     f.write(json.dumps(result))
 
 print("Done")

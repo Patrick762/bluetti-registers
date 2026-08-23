@@ -5,6 +5,11 @@
     "anyOf": [
         {
             "type": "string",
+            "const": "ac_1_o_v",
+            "title": "AC output voltage"
+        },
+        {
+            "type": "string",
             "const": "ac_eco_mode",
             "title": "AC Eco mode"
         },
@@ -17,6 +22,11 @@
             "type": "string",
             "const": "ac_i_c",
             "title": "AC input current"
+        },
+        {
+            "type": "string",
+            "const": "ac_i_f",
+            "title": "AC input frequency"
         },
         {
             "type": "string",
@@ -52,11 +62,6 @@
             "type": "string",
             "const": "ac_o_switch",
             "title": "AC output switch"
-        },
-        {
-            "type": "string",
-            "const": "ac_o_v",
-            "title": "AC output voltage"
         },
         {
             "type": "string",
@@ -150,6 +155,11 @@
         },
         {
             "type": "string",
+            "const": "b_ver_bms",
+            "title": "Battery BMS version"
+        },
+        {
+            "type": "string",
             "const": "b_v_total",
             "title": "Total battery voltage"
         },
@@ -195,6 +205,11 @@
         },
         {
             "type": "string",
+            "const": "d_led_mode",
+            "title": "LED mode"
+        },
+        {
+            "type": "string",
             "const": "d_num_battery_packs",
             "title": "Number of battery packs"
         },
@@ -212,6 +227,16 @@
             "type": "string",
             "const": "d_serial",
             "title": "Device serial number"
+        },
+        {
+            "type": "string",
+            "const": "d_split_phase_mode",
+            "title": "Split Phase mode"
+        },
+        {
+            "type": "string",
+            "const": "d_split_phase_switch",
+            "title": "Split Phase switch"
         },
         {
             "type": "string",

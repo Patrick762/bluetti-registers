@@ -86,5 +86,12 @@ def create_special_fields(n: str, field: dict[str, Any]):
             field["num_max"] = 100
             field["writeable"] = True
             field["category"] = "config"
+        case "d_time_remaining":
+            field["content"] = "uint"
+            field["unit"] = "h"
+            field["scale"] = 0.1
+        case "d_power_off":
+            field["content"] = "bool"
+            field["writeable"] = True
 
     return field

@@ -93,5 +93,21 @@ def create_special_fields(n: str, field: dict[str, Any]):
         case "d_power_off":
             field["content"] = "bool"
             field["writeable"] = True
+        case "dc_eco_mode":
+            field["options"] = "eco_mode"
+        case "ac_eco_mode":
+            field["options"] = "eco_mode"
+        case "d_charging_mode":
+            field["options"] = "charging_mode"
+        case "ac_o_mode":
+            field["options"] = "output_mode"
+        case "ac_ups_mode":
+            field["options"] = "ups_mode"
+        case "d_display_mode":
+            field["options"] = "display_mode"
+        case "d_split_phase_mode":
+            field["options"] = "split_phase_mode"
+        case "d_led_mode":
+            field["options"] = "led_mode"
 
     return field

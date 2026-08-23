@@ -5,8 +5,48 @@
     "anyOf": [
         {
             "type": "string",
+            "const": "ac_1_o_c",
+            "title": "AC P1 output current"
+        },
+        {
+            "type": "string",
+            "const": "ac_1_o_p",
+            "title": "AC P1 output power"
+        },
+        {
+            "type": "string",
             "const": "ac_1_o_v",
-            "title": "AC output voltage"
+            "title": "AC P1 output voltage"
+        },
+        {
+            "type": "string",
+            "const": "ac_2_o_c",
+            "title": "AC P2 output current"
+        },
+        {
+            "type": "string",
+            "const": "ac_2_o_p",
+            "title": "AC P2 output power"
+        },
+        {
+            "type": "string",
+            "const": "ac_2_o_v",
+            "title": "AC P2 output voltage"
+        },
+        {
+            "type": "string",
+            "const": "ac_3_o_c",
+            "title": "AC P3 output current"
+        },
+        {
+            "type": "string",
+            "const": "ac_3_o_p",
+            "title": "AC P3 output power"
+        },
+        {
+            "type": "string",
+            "const": "ac_3_o_v",
+            "title": "AC P3 output voltage"
         },
         {
             "type": "string",

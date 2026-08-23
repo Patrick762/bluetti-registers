@@ -33,12 +33,16 @@ def create_special_fields(n: str, field: dict[str, Any]):
     if n in BATTERY_SOC:
         field["content"] = "uint"
         field["unit"] = "%"
+        field["num_min"] = 0
+        field["num_max"] = 100
         field["state_class"] = "measurement"
         field["device_class"] = "battery"
 
     if n in BATTERY_SOH:
         field["content"] = "uint"
         field["unit"] = "%"
+        field["num_min"] = 0
+        field["num_max"] = 100
         field["category"] = "diagnostic"
         field["state_class"] = "measurement"
 
@@ -70,13 +74,17 @@ def create_special_fields(n: str, field: dict[str, Any]):
             field["state_class"] = "measurement"
         case "b_soc_low":
             field["content"] = "uint"
-            field["writeable"] = True
             field["unit"] = "%"
+            field["num_min"] = 0
+            field["num_max"] = 100
+            field["writeable"] = True
             field["category"] = "config"
         case "b_soc_high":
             field["content"] = "uint"
-            field["writeable"] = True
             field["unit"] = "%"
+            field["num_min"] = 0
+            field["num_max"] = 100
+            field["writeable"] = True
             field["category"] = "config"
 
     return field

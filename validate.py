@@ -24,6 +24,9 @@ for f in device_files:
 
     validate(data, schema=schema)
 
+    if len(data["contributors"]) == 0:
+        raise Exception(f'Contributors for device {data["name"]} missing')
+
     # Check sorting for field attributes
     for f in list(data["fields"]):
         r = checkSortedFieldAttributes(f)

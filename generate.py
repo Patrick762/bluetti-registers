@@ -4,10 +4,7 @@ from jsonschema import validate
 
 from helpers import (
     getDevicesModbusTcp,
-    getDevicesV1Bluetooth,
-    getDevicesV2Bluetooth,
-    getBaseV1Bluetooth,
-    getBaseV2Bluetooth,
+    getDevicesBluetooth,
 )
 
 print("Loading devices list schema")
@@ -22,34 +19,16 @@ print("Getting device files")
 
 result = []
 
-# Load base fields
-base_fields_v1 = list()
-base_fields_v2 = list()
-
-with open(getBaseV1Bluetooth(), "r") as f:
-    data = json.load(f)
-    base_fields_v1 = data["fields"]
-
-with open(getBaseV2Bluetooth(), "r") as f:
-    data = json.load(f)
-    base_fields_v2 = data["fields"]
-
 # Load device files
-for i, fun in enumerate([getDevicesV1Bluetooth, getDevicesV2Bluetooth]):
-    device_files = fun()
-    base_fields: list = base_fields_v1 if i == 0 else base_fields_v2
+for f in getDevicesBluetooth():
+    print(f"Loading device definition {f}")
 
-    for f in device_files:
-        print(f"Loading device definition {f}")
+    with open(f, "r") as f:
+        data = json.load(f)
+        del data["$schema"]
+        result.append(data)
 
-        with open(f, "r") as f:
-            data = json.load(f)
-            del data["$schema"]
-            for bf in base_fields:
-                data["fields"].append(bf)
-            result.append(data)
-
-        print("added to result")
+    print("added to result")
 
 print("Validating output")
 

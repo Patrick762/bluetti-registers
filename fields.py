@@ -48,7 +48,6 @@ def create_special_fields(n: str, field: dict[str, Any]):
 
     if n in ENUM_FIELDS:
         field["content"] = "enum"
-        field["category"] = "diagnostic"
 
     match (n):
         case "d_inverter_total":
@@ -109,5 +108,8 @@ def create_special_fields(n: str, field: dict[str, Any]):
             field["options"] = "split_phase_mode"
         case "d_led_mode":
             field["options"] = "led_mode"
+
+    if n in ENUM_FIELDS:
+        field["category"] = "diagnostic"
 
     return field

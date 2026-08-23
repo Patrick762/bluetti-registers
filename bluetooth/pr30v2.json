@@ -1,0 +1,72 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
+    "name": "PR30V2",
+    "contributors": [
+        "@gentoo90"
+    ],
+    "fields": [
+        {
+            "name": "b_soc_total",
+            "address": 102,
+            "content": "uint",
+            "unit": "%",
+            "num_min": 0,
+            "num_max": 100,
+            "state_class": "measurement",
+            "device_class": "battery"
+        },
+        {
+            "name": "d_inverter_type",
+            "address": 110,
+            "content": "string",
+            "length": 6,
+            "category": "diagnostic"
+        },
+        {
+            "name": "d_serial",
+            "address": 116,
+            "content": "serial",
+            "category": "diagnostic"
+        },
+        {
+            "name": "dc_o_p_total",
+            "address": 140,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_o_p_total",
+            "address": 142,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "dc_i_p_total",
+            "address": 144,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_i_p_total",
+            "address": 146,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_i_v",
+            "address": 1314,
+            "content": "uint",
+            "unit": "V",
+            "state_class": "measurement",
+            "device_class": "voltage"
+        }
+    ]
+}

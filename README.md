@@ -14,3 +14,12 @@ Just import registers using the json file of a release.
 4. power/voltage/current/energy/frequency/temperature (short: p/v/c/e/f/t)
 
 5. **total** / **avg** (if total over all phases/strings or average over all cells)
+
+## Workflow
+
+1. Add registers in csv
+2. Generate JSON files using `generate-from-csv.py`
+4. Validate JSON files using `validate.py`
+5. Git commit and push
+
+The full JSON files can be built using `generate.py`.

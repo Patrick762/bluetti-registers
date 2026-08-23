@@ -9,14 +9,19 @@ def by_addr(f):
     return f["address"]
 
 
-def generate(name: str, field_registers: dict[str, int], output_dir: str):
+def generate(
+    name: str,
+    contributors: list[str],
+    field_registers: dict[str, int],
+    output_dir: str,
+):
     if name == "":
         return
 
     obj = {
         "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
         "name": name,
-        "contributors": [],
+        "contributors": contributors,
         "fields": [],
     }
 
@@ -41,9 +46,10 @@ with open("modbus-tcp/modbus-tcp.csv") as f:
 
     for line in all[1:]:
         name = line.split(",")[0]
+        contributors = line.split(",")[1].split(" ")
         dev = {}
         for idx, col in enumerate(line.split(",")):
-            if idx == 0:
+            if idx < 2:
                 continue
             if col != "" and header[idx] != "":
                 addr = str(col).strip()
@@ -51,7 +57,7 @@ with open("modbus-tcp/modbus-tcp.csv") as f:
                     continue
                 dev[str(header[idx]).strip()] = int(addr)
 
-        generate(name, dev, "modbus-tcp/")
+        generate(name, contributors, dev, "modbus-tcp/")
 
 with open("bluetooth/bluetooth.csv") as f:
     all = f.readlines()
@@ -59,9 +65,10 @@ with open("bluetooth/bluetooth.csv") as f:
 
     for line in all[1:]:
         name = line.split(",")[0]
+        contributors = line.split(",")[1].split(" ")
         dev = {}
         for idx, col in enumerate(line.split(",")):
-            if idx == 0:
+            if idx < 2:
                 continue
             if col != "" and header[idx] != "":
                 addr = str(col).strip()
@@ -69,4 +76,4 @@ with open("bluetooth/bluetooth.csv") as f:
                     continue
                 dev[str(header[idx]).strip()] = int(addr)
 
-        generate(name, dev, "bluetooth/")
+        generate(name, contributors, dev, "bluetooth/")

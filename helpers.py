@@ -22,43 +22,22 @@ field_sorting = [
 SORT_ORDER = {attr: idx for idx, attr in enumerate(field_sorting)}
 
 
-def is_not_base(path: str):
-    return not path.endswith("base.json") and path.endswith(".json")
-
-
-def getDevicesV1Bluetooth():
-    v1_dir = "./bluetooth/v1"
-    v1_devices = [join(v1_dir, f) for f in listdir(v1_dir) if isfile(join(v1_dir, f))]
-
-    return filter(is_not_base, v1_devices)
-
-
-def getDevicesV2Bluetooth():
-    v2_dir = "./bluetooth/v2"
-    v2_devices = [join(v2_dir, f) for f in listdir(v2_dir) if isfile(join(v2_dir, f))]
-
-    return filter(is_not_base, v2_devices)
+def is_json(path: str):
+    return path.endswith(".json")
 
 
 def getDevicesBluetooth():
-    return list(getDevicesV1Bluetooth()) + list(getDevicesV2Bluetooth())
+    dir = "./bluetooth"
+    devices = [join(dir, f) for f in listdir(dir) if isfile(join(dir, f))]
 
-
-def getBaseV1Bluetooth():
-    v1_dir = "./bluetooth/v1"
-    return join(v1_dir, "base.json")
-
-
-def getBaseV2Bluetooth():
-    v2_dir = "./bluetooth/v2"
-    return join(v2_dir, "base.json")
+    return filter(is_json, devices)
 
 
 def getDevicesModbusTcp():
-    v1_dir = "./modbus-tcp/v1"
-    v1_devices = [join(v1_dir, f) for f in listdir(v1_dir) if isfile(join(v1_dir, f))]
+    dir = "./modbus-tcp"
+    devices = [join(dir, f) for f in listdir(dir) if isfile(join(dir, f))]
 
-    return filter(is_not_base, v1_devices)
+    return filter(is_json, devices)
 
 
 def checkSortedFieldAttributes(field) -> bool:
@@ -126,8 +105,8 @@ def create_field(n: str):
     elif "_mode_" in n or n.endswith("_mode"):
         outp["content"] = "enum"
         outp["options"] = ""
-        outp["category"] = "config"
         outp["writeable"] = True
+        outp["category"] = "config"
     elif "_serial_" in n or n.endswith("_serial"):
         outp["content"] = "serial"
         outp["category"] = "diagnostic"

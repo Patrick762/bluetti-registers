@@ -1,0 +1,146 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
+    "name": "EB3A",
+    "contributors": [
+        "@Patrick762"
+    ],
+    "fields": [
+        {
+            "name": "d_inverter_type",
+            "address": 10,
+            "content": "string",
+            "length": 6,
+            "category": "diagnostic"
+        },
+        {
+            "name": "d_serial",
+            "address": 17,
+            "content": "serial",
+            "category": "diagnostic"
+        },
+        {
+            "name": "d_ver_arm",
+            "address": 23,
+            "content": "version",
+            "category": "diagnostic"
+        },
+        {
+            "name": "d_ver_dsp",
+            "address": 25,
+            "content": "version",
+            "category": "diagnostic"
+        },
+        {
+            "name": "dc_i_p_total",
+            "address": 36,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_i_p_total",
+            "address": 37,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "ac_o_p_total",
+            "address": 38,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "dc_o_p_total",
+            "address": 39,
+            "content": "uint",
+            "unit": "W",
+            "state_class": "measurement",
+            "device_class": "power"
+        },
+        {
+            "name": "b_soc_total",
+            "address": 43,
+            "content": "uint",
+            "unit": "%",
+            "num_min": 0,
+            "num_max": 100,
+            "state_class": "measurement",
+            "device_class": "battery"
+        },
+        {
+            "name": "ac_i_v",
+            "address": 77,
+            "content": "uint",
+            "unit": "V",
+            "state_class": "measurement",
+            "device_class": "voltage"
+        },
+        {
+            "name": "dc_i_v",
+            "address": 86,
+            "content": "uint",
+            "unit": "V",
+            "state_class": "measurement",
+            "device_class": "voltage"
+        },
+        {
+            "name": "ac_o_switch",
+            "address": 3007,
+            "content": "bool",
+            "writeable": true
+        },
+        {
+            "name": "dc_o_switch",
+            "address": 3008,
+            "content": "bool",
+            "writeable": true
+        },
+        {
+            "name": "d_led_mode",
+            "address": 3034,
+            "content": "enum",
+            "options": "led_mode",
+            "writeable": true,
+            "category": "config"
+        },
+        {
+            "name": "d_power_off",
+            "address": 3060,
+            "content": "bool",
+            "writeable": true
+        },
+        {
+            "name": "ac_eco_switch",
+            "address": 3063,
+            "content": "bool",
+            "writeable": true
+        },
+        {
+            "name": "ac_eco_mode",
+            "address": 3064,
+            "content": "enum",
+            "options": "eco_mode",
+            "writeable": true,
+            "category": "config"
+        },
+        {
+            "name": "d_charging_mode",
+            "address": 3065,
+            "content": "enum",
+            "options": "charging_mode",
+            "writeable": true,
+            "category": "config"
+        },
+        {
+            "name": "ac_power_lifting_switch",
+            "address": 3066,
+            "content": "bool",
+            "writeable": true
+        }
+    ]
+}

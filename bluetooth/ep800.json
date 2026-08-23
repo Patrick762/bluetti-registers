@@ -1,0 +1,32 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Patrick762/bluetti-registers/refs/heads/main/schemas/device.json",
+    "name": "EP800",
+    "contributors": [
+        "@jhagenk"
+    ],
+    "fields": [
+        {
+            "name": "b_soc_total",
+            "address": 102,
+            "content": "uint",
+            "unit": "%",
+            "num_min": 0,
+            "num_max": 100,
+            "state_class": "measurement",
+            "device_class": "battery"
+        },
+        {
+            "name": "d_inverter_type",
+            "address": 110,
+            "content": "string",
+            "length": 6,
+            "category": "diagnostic"
+        },
+        {
+            "name": "d_serial",
+            "address": 116,
+            "content": "serial",
+            "category": "diagnostic"
+        }
+    ]
+}

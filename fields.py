@@ -79,5 +79,4 @@ def create_special_fields(n: str, field: dict[str, Any]):
             field["unit"] = "%"
             field["category"] = "config"
 
-
     return field

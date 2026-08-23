@@ -23,7 +23,7 @@ SORT_ORDER = {attr: idx for idx, attr in enumerate(field_sorting)}
 
 
 def is_not_base(path: str):
-    return (not path.endswith("base.json") and path.endswith(".json"))
+    return not path.endswith("base.json") and path.endswith(".json")
 
 
 def getDevicesV1Bluetooth():

@@ -1,9 +1,8 @@
 {
     "$schema": "https://patrick762.github.io/bluetti-registers/device.json",
-    "name": "EL100V2",
+    "name": "EL10",
     "contributors": [
-        "@seaburger",
-        "@lesolas20"
+        "@sidieje"
     ],
     "fields": [
         {
@@ -146,26 +145,6 @@
             "address": 2021,
             "content": "bool",
             "writeable": true
-        },
-        {
-            "name": "b_soc_low",
-            "address": 2022,
-            "content": "uint",
-            "unit": "%",
-            "num_min": 0,
-            "num_max": 100,
-            "writeable": true,
-            "category": "config"
-        },
-        {
-            "name": "b_soc_high",
-            "address": 2023,
-            "content": "uint",
-            "unit": "%",
-            "num_min": 0,
-            "num_max": 100,
-            "writeable": true,
-            "category": "config"
         },
         {
             "name": "d_display_mode",

@@ -15,7 +15,7 @@ Just import registers using the json file of a release.
 
 5. **total** / **avg** (if total over all phases/strings or average over all cells)
 
-## Workflow
+## Workflow for new devices
 
 1. Add registers in csv
 2. Generate JSON files using `generate-from-csv.py`

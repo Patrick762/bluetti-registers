@@ -14,7 +14,7 @@ def generate(
     contributors: list[str],
     field_registers: dict[str, int],
     output_dir: str,
-    com: str = "b"
+    com: str = "b",
 ):
     if name == "":
         return

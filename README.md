@@ -19,7 +19,7 @@ Just import registers using the json file of a release.
 
 1. Add registers in csv
 2. Generate JSON files using `generate-from-csv.py`
-4. Validate JSON files using `validate.py`
+4. Validate JSON files using `validate-devices.py`
 5. Git commit and push
 
 The full JSON files can be built using `generate.py`.

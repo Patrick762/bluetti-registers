@@ -8,6 +8,7 @@ class DataField:
     datatype: str = "uint"
     length: int = 1
     scaling: float = 1
+    writeable: bool = False
 
     def to_dict(self):
         return {
@@ -16,6 +17,7 @@ class DataField:
             "datatype": self.datatype,
             "length": self.length,
             "scaling": self.scaling,
+            "writeable": self.writeable,
         }
 
 

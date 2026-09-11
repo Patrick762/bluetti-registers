@@ -130,6 +130,39 @@ def read_protocol_def_csv() -> list[DataProtocol]:
 
             protocol.fields = copy
 
+    with open(join(base_dir, "protocols", "writeable.csv"), "r") as f:
+        lines = f.readlines()
+
+        head = lines[0].rstrip()
+        field_names = head.split(",")[2:]
+
+        for l in lines[1:]:
+            l = l.rstrip()
+            cols = l.split(",")
+            scalings = cols[2:]
+
+            protocol = next(
+                filter(
+                    lambda x: x.version == int(cols[0]) and x.comm_type == str(cols[1]),
+                    protocols,
+                ),
+                None,
+            )
+            if not protocol:
+                continue
+
+            copy = protocol.fields
+
+            for col, writeable in enumerate(scalings):
+                if writeable != "1":
+                    continue
+
+                field = next(filter(lambda x: x.name == field_names[col], copy), None)
+                if field is not None:
+                    field.writeable = True
+
+            protocol.fields = copy
+
     return protocols
 
 

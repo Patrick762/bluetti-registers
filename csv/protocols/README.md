@@ -8,3 +8,4 @@ All files combined describe how the fields in each protocol work.
 - lengths.csv - Field lengths in bytes
 - registers.csv - Register number of fields (start address)
 - scalings.csv - Scalings for each field. Multiply with read value to get result
+- writeable.csv - Defines if fields are writeable

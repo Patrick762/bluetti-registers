@@ -1,15 +1,33 @@
 from dataclasses import dataclass
 
+
 @dataclass
-class DataField():
+class DataField:
     name: str
     start: int
     datatype: str = "uint"
-    lenght: int = 1
+    length: int = 1
     scaling: float = 1
 
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "start": self.start,
+            "datatype": self.datatype,
+            "length": self.length,
+            "scaling": self.scaling,
+        }
+
+
 @dataclass
-class DataProtocol():
+class DataProtocol:
     version: int
     comm_type: str
     fields: list[DataField]
+
+    def to_dict(self):
+        return {
+            "version": self.version,
+            "comm_type": self.comm_type,
+            "fields": [f.to_dict() for f in self.fields],
+        }

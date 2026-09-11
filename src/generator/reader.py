@@ -13,25 +13,75 @@ def read_protocol_def_csv() -> list[DataField]:
     with open(join(base_dir, "protocols", "registers.csv"), "r") as f:
         lines = f.readlines()
 
-        head = lines[0]
+        head = lines[0].rstrip()
         field_names = head.split(",")[2:]
 
         fields: list[DataField] = []
         for l in lines[1:]:
+            l = l.rstrip()
             cols = l.split(",")
             registers = cols[2:]
 
             for col, reg in enumerate(registers):
-                fields.append(DataField(field_names[col], reg))
+                if reg == "":
+                    continue
+
+                fields.append(DataField(field_names[col], int(reg)))
 
             protocol = DataProtocol(int(cols[0]), str(cols[1]), fields)
             protocols.append(protocol)
 
-    # TODO datatypes csv
+    with open(join(base_dir, "protocols", "datatypes.csv"), "r") as f:
+        lines = f.readlines()
+
+        head = lines[0].rstrip()
+        field_names = head.split(",")[2:]
+
+        fields: list[DataField] = []
+        for l in lines[1:]:
+            l = l.rstrip()
+            cols = l.split(",")
+            types = cols[2:]
+
+            protocol = next(filter(lambda x: x.version == int(cols[0]) and x.comm_type == str(cols[1]), protocols), None)
+            copy = protocol.fields
+
+            for col, t in enumerate(types):
+                if t == "":
+                    continue
+
+                field = next(filter(lambda x: x.name == field_names[col], copy), None)
+                field.datatype = t
+
+            protocol.fields = copy
 
     # TODO lengths csv
 
-    # TODO scalings csv
+    with open(join(base_dir, "protocols", "scalings.csv"), "r") as f:
+            lines = f.readlines()
+    
+            head = lines[0].rstrip()
+            field_names = head.split(",")[2:]
+    
+            fields: list[DataField] = []
+            for l in lines[1:]:
+                l = l.rstrip()
+                cols = l.split(",")
+                scalings = cols[2:]
+    
+                protocol = next(filter(lambda x: x.version == int(cols[0]) and x.comm_type == str(cols[1]), protocols), None)
+                copy = protocol.fields
+    
+                for col, scaling in enumerate(scalings):
+                    if scaling == "":
+                        continue
+    
+                    field = next(filter(lambda x: x.name == field_names[col], copy), None)
+                    field.scaling = float(scaling)
+    
+                protocol.fields = copy
+
+    print(protocols)
 
     return protocols
 

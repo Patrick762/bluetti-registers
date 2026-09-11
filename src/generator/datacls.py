@@ -31,3 +31,19 @@ class DataProtocol:
             "comm_type": self.comm_type,
             "fields": [f.to_dict() for f in self.fields],
         }
+
+
+@dataclass
+class BluettiDevice:
+    name: str
+    proto_version: int
+    comm_type: str
+    fields: list[DataField]
+
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "proto_version": self.proto_version,
+            "comm_type": self.comm_type,
+            "fields": [f.to_dict() for f in self.fields],
+        }

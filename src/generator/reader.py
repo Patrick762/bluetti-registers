@@ -1,14 +1,14 @@
 from os.path import join
 
-from .datacls import DataField, DataProtocol
+from .datacls import BluettiDevice, DataField, DataProtocol
 
 
 base_dir = "csv/"
 
 
-def read_protocol_def_csv() -> list[DataField]:
+def read_protocol_def_csv() -> list[DataProtocol]:
     """protocols/*.csv - Describes each field per protocol. Includes starting registers, datatypes, field length and scaling"""
-    protocols: list[DataField] = []
+    protocols: list[DataProtocol] = []
 
     with open(join(base_dir, "protocols", "registers.csv"), "r") as f:
         lines = f.readlines()
@@ -133,9 +133,58 @@ def read_protocol_def_csv() -> list[DataField]:
     return protocols
 
 
-def read_devices_csv():
+def read_devices_csv(protocols: list[DataProtocol]):
     """devices.csv - Describes which device uses which protocol and what fields are available"""
-    pass
+
+    devices: list[BluettiDevice] = []
+
+    with open(join(base_dir, "devices.csv"), "r") as f:
+        lines = f.readlines()
+
+        head = lines[0].rstrip()
+        field_names = head.split(",")[3:]
+
+        for l in lines[1:]:
+            l = l.rstrip()
+            cols = l.split(",")
+            supported_fields = cols[3:]
+
+            fields: list[DataField] = []
+            for col, supp in enumerate(supported_fields):
+                if supp != "1":
+                    continue
+
+                fname = field_names[col]
+
+                found_proto = next(
+                    filter(
+                        lambda x: x.version == int(cols[1])
+                        and x.comm_type == str(cols[2]),
+                        protocols,
+                    ),
+                    None,
+                )
+
+                if found_proto is None:
+                    raise Exception(
+                        f"Protocol with version {cols[1]} and comm_type {cols[2]} not found (device: {cols[0]})"
+                    )
+
+                found_field = next(
+                    filter(lambda x: x.name == str(fname), found_proto.fields), None
+                )
+
+                if found_field is None:
+                    raise Exception(
+                        f"Field {fname} not defined in protocol with version {cols[1]} and comm_type {cols[2]} (device: {cols[0]})"
+                    )
+
+                fields.append(found_field)
+
+            device = BluettiDevice(str(cols[0]), int(cols[1]), str(cols[2]), fields)
+            devices.append(device)
+
+    return devices
 
 
 def read_datasheet_csv():

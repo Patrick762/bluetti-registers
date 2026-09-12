@@ -163,6 +163,31 @@ def read_protocol_def_csv() -> list[DataProtocol]:
 
             protocol.fields = copy
 
+    with open(join(base_dir, "protocols", "units.csv"), "r") as f:
+        lines = f.readlines()
+
+        field_names = lines[0].rstrip().split(",")
+
+        for l in lines[1:]:
+            l = l.rstrip()
+            cols = l.split(",")
+
+            for protocol in protocols:
+                copy = protocol.fields
+
+                for col, unit in enumerate(cols):
+                    if unit == "":
+                        continue
+
+                    field = next(
+                        filter(lambda x: x.name == field_names[col], copy), None
+                    )
+
+                    if field is not None:
+                        field.unit = unit
+
+                protocol.fields = copy
+
     return protocols
 
 

@@ -10,9 +10,16 @@ class DataField:
     length: int = 1
     scaling: float = 1
     writeable: bool = False
+    unit: str | None = None
+    category: str | None = None
+    """Category (config / diagnostic)"""
+    sensor: str | None = None
+    """Sensor type (power, voltage, ...)"""
+    state_type: str | None = None
+    """State type (measurement / increasing)"""
 
     def to_dict(self):
-        return {
+        d = {
             "name": self.name,
             "start": self.start,
             "datatype": self.datatype,
@@ -20,6 +27,20 @@ class DataField:
             "scaling": self.scaling,
             "writeable": self.writeable,
         }
+
+        if self.unit is not None:
+            d["unit"] = self.unit
+
+        if self.category is not None:
+            d["category"] = self.category
+
+        if self.sensor is not None:
+            d["sensor"] = self.sensor
+
+        if self.state_type is not None:
+            d["state_type"] = self.state_type
+
+        return d
 
 
 @dataclass

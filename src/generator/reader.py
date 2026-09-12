@@ -392,3 +392,31 @@ def read_enum_csv():
             enums.append(enum)
 
     return enums
+
+
+def read_translations_csv() -> dict[str, dict[str, str]]:
+    """Returns locale -> field_name -> translation dict"""
+    translations: dict[str, dict[str, str]] = {}
+
+    with open(join(base_dir, "protocols", "translations.csv"), "r") as f:
+        lines = f.readlines()
+
+        head = lines[0].rstrip()
+        field_names = head.split(",")[1:]
+
+        for l in lines[1:]:
+            l = l.rstrip()
+            cols = l.split(",")
+            locale = cols[0]
+            values = cols[1:]
+
+            translations_dict: dict[str, str] = {}
+            for col, val in enumerate(values):
+                if val == "":
+                    continue
+
+                translations_dict[field_names[col]] = val
+
+            translations[locale] = translations_dict
+
+    return translations

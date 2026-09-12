@@ -1,5 +1,6 @@
 import json
-from os.path import join
+from os.path import join, exists
+from os import mkdir
 
 from generator import (
     read_protocol_def_csv,
@@ -9,6 +10,9 @@ from generator import (
 )
 
 if __name__ == "__main__":
+    if not exists("out"):
+        mkdir("out")
+
     protocols = read_protocol_def_csv()
 
     with open(join("out", "protocols.json"), "w") as f:

@@ -214,8 +214,32 @@ def read_devices_csv(protocols: list[DataProtocol]):
 
                 fields.append(found_field)
 
-            device = BluettiDevice(str(cols[0]), int(cols[1]), str(cols[2]), fields)
+            device = BluettiDevice(str(cols[0]), int(cols[1]), str(cols[2]), fields, [])
             devices.append(device)
+
+    with open(join(base_dir, "contributors.csv"), "r") as f:
+        lines = f.readlines()
+
+        head = lines[0].rstrip()
+
+        for l in lines[1:]:
+            l = l.rstrip()
+            cols = l.split(",")
+            contributors = list(filter(lambda x: x != "", cols[3:]))
+
+            device = next(
+                filter(
+                    lambda x: x.name == str(cols[0])
+                    and x.proto_version == int(cols[1])
+                    and x.comm_type == str(cols[2]),
+                    devices,
+                ),
+                None,
+            )
+            if not device:
+                continue
+
+            device.contributors = contributors
 
     return devices
 

@@ -41,11 +41,13 @@ class BluettiDevice:
     proto_version: int
     comm_type: str
     fields: list[DataField]
+    contributors: list[str]
 
     def to_dict(self):
         return {
             "name": self.name,
             "proto_version": self.proto_version,
             "comm_type": self.comm_type,
+            "contributors": self.contributors,
             "fields": [f.to_dict() for f in self.fields],
         }

@@ -188,6 +188,33 @@ def read_protocol_def_csv() -> list[DataProtocol]:
 
                 protocol.fields = copy
 
+    with open(join(base_dir, "protocols", "categories.csv"), "r") as f:
+        lines = f.readlines()
+
+        field_names = lines[0].rstrip().split(",")
+
+        for l in lines[1:]:
+            l = l.rstrip()
+            cols = l.split(",")
+
+            for protocol in protocols:
+                copy = protocol.fields
+
+                for col, category in enumerate(cols):
+                    if category == "":
+                        continue
+
+                    field = next(
+                        filter(lambda x: x.name == field_names[col], copy), None
+                    )
+
+                    if field is not None:
+                        field.category = category
+
+                protocol.fields = copy
+
+    # TODO categories, device_classes and state_classes
+
     return protocols
 
 

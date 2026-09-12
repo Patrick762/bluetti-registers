@@ -55,7 +55,7 @@ jobs:
             with:
                 name: devices.json
                 path: ./out/devices.json
-        -   name: Upload devices artifact
+        -   name: Upload index.html artifact
             uses: actions/upload-artifact@v7
             with:
                 name: index.html

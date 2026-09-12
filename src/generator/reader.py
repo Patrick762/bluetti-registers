@@ -1,13 +1,12 @@
 from os.path import join
 
-from .datacls import BluettiDevice, DataField, DataProtocol
+from .datacls import BluettiDevice, BluettiEnum, DataField, DataProtocol
 
 
 base_dir = "csv/"
 
 
 def read_protocol_def_csv() -> list[DataProtocol]:
-    """protocols/*.csv - Describes each field per protocol. Includes starting registers, datatypes, field length and scaling"""
     protocols: list[DataProtocol] = []
 
     with open(join(base_dir, "protocols", "registers.csv"), "r") as f:
@@ -267,8 +266,6 @@ def read_protocol_def_csv() -> list[DataProtocol]:
 
 
 def read_devices_csv(protocols: list[DataProtocol]) -> list[BluettiDevice]:
-    """devices.csv - Describes which device uses which protocol and what fields are available"""
-
     devices: list[BluettiDevice] = []
 
     with open(join(base_dir, "devices.csv"), "r") as f:
@@ -371,3 +368,27 @@ def read_devices_csv(protocols: list[DataProtocol]) -> list[BluettiDevice]:
             device.specififations = specififations
 
     return devices
+
+
+def read_enum_csv():
+    enums: list[BluettiEnum] = []
+
+    with open(join(base_dir, "protocols", "enums.csv"), "r") as f:
+        lines = f.readlines()
+
+        for l in lines[1:]:
+            l = l.rstrip()
+            cols = l.split(",")
+            values = cols[1:]
+
+            values_dict: dict[int, str] = {}
+            for col, val in enumerate(values):
+                if val == "":
+                    continue
+
+                values_dict[col] = val
+
+            enum = BluettiEnum(str(cols[0]), values_dict)
+            enums.append(enum)
+
+    return enums

@@ -1,0 +1,9 @@
+field_name,0,1,2,3,4,5,6,7,8,9,10
+d_charging_mode,normal,silent,turbo,custom,,,,,,,
+d_display_mode,,,sec30,min1,min5,never,,,,,
+ac_eco_mode,,hours1,hours2,hours3,hours4,,,,,,
+dc_eco_mode,,hours1,hours2,hours3,hours4,,,,,,
+d_led_mode,,low,high,sos,off,,,,,,
+ac_o_mode,stop,inverter_output,bypass_output_c,bypass_output_d,load_matching,,,,,,
+d_split_phase_mode,slave,master,,,,,,,,,
+ac_ups_mode,,custom,pv_priority,normal,time_control,,,,,,

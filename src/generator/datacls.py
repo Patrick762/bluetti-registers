@@ -75,3 +75,15 @@ class BluettiDevice:
             "specififations": self.specififations,
             "fields": [f.to_dict() for f in self.fields],
         }
+
+
+@dataclass
+class BluettiEnum:
+    field: str
+    values: dict[int, str]
+
+    def to_dict(self):
+        return {
+            "field": self.field,
+            "values": self.values,
+        }

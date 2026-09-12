@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Any
 
 
 @dataclass
@@ -42,6 +43,7 @@ class BluettiDevice:
     comm_type: str
     fields: list[DataField]
     contributors: list[str]
+    specififations: dict[str, Any]
 
     def to_dict(self):
         return {
@@ -49,5 +51,6 @@ class BluettiDevice:
             "proto_version": self.proto_version,
             "comm_type": self.comm_type,
             "contributors": self.contributors,
+            "specififations": self.specififations,
             "fields": [f.to_dict() for f in self.fields],
         }

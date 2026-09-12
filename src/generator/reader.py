@@ -166,7 +166,7 @@ def read_protocol_def_csv() -> list[DataProtocol]:
     return protocols
 
 
-def read_devices_csv(protocols: list[DataProtocol]):
+def read_devices_csv(protocols: list[DataProtocol]) -> list[BluettiDevice]:
     """devices.csv - Describes which device uses which protocol and what fields are available"""
 
     devices: list[BluettiDevice] = []
@@ -214,7 +214,9 @@ def read_devices_csv(protocols: list[DataProtocol]):
 
                 fields.append(found_field)
 
-            device = BluettiDevice(str(cols[0]), int(cols[1]), str(cols[2]), fields, [])
+            device = BluettiDevice(
+                str(cols[0]), int(cols[1]), str(cols[2]), fields, [], {}
+            )
             devices.append(device)
 
     with open(join(base_dir, "contributors.csv"), "r") as f:
@@ -241,9 +243,31 @@ def read_devices_csv(protocols: list[DataProtocol]):
 
             device.contributors = contributors
 
+    with open(join(base_dir, "specs.csv"), "r") as f:
+        lines = f.readlines()
+
+        head = lines[0].rstrip()
+        spec_names = head.split(",")[1:]
+
+        for l in lines[1:]:
+            l = l.rstrip()
+            cols = l.split(",")
+            specs = cols[1:]
+
+            device = next(
+                filter(
+                    lambda x: x.name == str(cols[0]),
+                    devices,
+                ),
+                None,
+            )
+            if not device:
+                continue
+
+            specififations = {}
+            for col, spec in enumerate(specs):
+                specififations[spec_names[col]] = spec
+
+            device.specififations = specififations
+
     return devices
-
-
-def read_datasheet_csv():
-    """specs.csv - Contains specs per powerstation such as max. input voltage / power to filter out invalid values if needed"""
-    pass

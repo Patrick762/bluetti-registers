@@ -55,6 +55,11 @@ jobs:
             with:
                 name: devices.json
                 path: ./out/devices.json
+        -   name: Upload devices artifact
+            uses: actions/upload-artifact@v7
+            with:
+                name: index.html
+                path: ./static/index.html
         -   name: Release
             uses: softprops/action-gh-release@v3
             if: github.ref_type == 'tag'
@@ -64,7 +69,7 @@ jobs:
                     ./out/enums.json
                     ./out/translations.json
                     ./out/devices.json
-                    ./static/index.html
+
     deploy:
         environment:
             name: github-pages

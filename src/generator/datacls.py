@@ -22,7 +22,7 @@ class DataField:
     datatype: str = "uint"
     length: int = 1
     scaling: float = 1
-    writeable: bool = False
+    writable: bool = False
     unit: str | None = None
     category: str | None = None
     """Category (config / diagnostic)"""
@@ -38,8 +38,10 @@ class DataField:
             "datatype": self.datatype,
             "length": self.length,
             "scaling": self.scaling,
-            "writeable": self.writeable,
         }
+
+        if self.writable is not False:
+            d["writable"] = self.writable
 
         if self.unit is not None:
             d["unit"] = self.unit

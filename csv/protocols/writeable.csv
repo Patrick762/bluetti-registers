@@ -1,4 +1,4 @@
-version,comm,ac_eco_mode,ac_eco_switch,ac_o_mode,ac_o_switch,ac_power_lifting_switch,ac_ups_mode,b_soc_high,b_soc_low,d_charging_mode,d_display_mode,d_led_mode,d_power_off,d_split_phase_switch,d_split_phase_mode,dc_eco_mode,dc_eco_switch,dc_o_switch
-1,bt,1,1,1,1,1,1,1,1,1,1,1,1,1,1,,,1
-2,bt,1,1,,1,1,,1,1,1,1,,,,,1,1,1
-1,modbus,,,,,,,,,,,,,,,,,
+version,comm,ac_eco_mode,ac_eco_switch,ac_o_mode,ac_o_switch,ac_power_lifting_switch,ac_ups_mode,b_soc_high,b_soc_low,d_charging_mode,d_control_mode,d_display_mode,d_led_mode,d_power_off,d_split_phase_switch,d_split_phase_mode,dc_eco_mode,dc_eco_switch,dc_o_switch
+1,bt,1,1,1,1,1,1,1,1,1,,1,1,1,1,1,,,1
+2,bt,1,1,,1,1,,1,1,1,,1,,,,,1,1,1
+1,modbus,,,,,,,,,,1,,,,,,,,

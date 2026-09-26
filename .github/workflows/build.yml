@@ -55,6 +55,11 @@ jobs:
             with:
                 name: devices.json
                 path: ./out/devices.json
+        -   name: Upload documentation artifact
+            uses: actions/upload-artifact@v7
+            with:
+                name: Documentation.pdf
+                path: ./out/Documentation.pdf
         -   name: Upload index.html artifact
             uses: actions/upload-artifact@v7
             with:
@@ -69,6 +74,7 @@ jobs:
                     ./out/enums.json
                     ./out/translations.json
                     ./out/devices.json
+                    ./out/Documentation.pdf
 
     deploy:
         environment:

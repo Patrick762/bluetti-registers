@@ -8,6 +8,7 @@ from generator import (
     read_enum_csv,
     read_translations_csv,
 )
+from generator.pdf import generate_pdf
 
 if __name__ == "__main__":
     if not exists("out"):
@@ -32,3 +33,5 @@ if __name__ == "__main__":
 
     with open(join("out", "translations.json"), "w") as f:
         json.dump(translations, f, indent=2)
+
+    generate_pdf()

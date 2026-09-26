@@ -34,4 +34,4 @@ if __name__ == "__main__":
     with open(join("out", "translations.json"), "w") as f:
         json.dump(translations, f, indent=2)
 
-    generate_pdf()
+    generate_pdf(protocols, translations)

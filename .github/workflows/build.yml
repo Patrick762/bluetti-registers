@@ -60,6 +60,21 @@ jobs:
             with:
                 name: Documentation.pdf
                 path: ./out/Documentation.pdf
+        -   name: Upload devices md artifact
+            uses: actions/upload-artifact@v7
+            with:
+                name: devices.md
+                path: ./out/devices.md
+        -   name: Upload devices bt md artifact
+            uses: actions/upload-artifact@v7
+            with:
+                name: devices-bt.md
+                path: ./out/devices-bt.md
+        -   name: Upload devices modbus md artifact
+            uses: actions/upload-artifact@v7
+            with:
+                name: devices-modbus.md
+                path: ./out/devices-modbus.md
         -   name: Upload index.html artifact
             uses: actions/upload-artifact@v7
             with:
@@ -75,6 +90,9 @@ jobs:
                     ./out/translations.json
                     ./out/devices.json
                     ./out/Documentation.pdf
+                    ./out/devices.md
+                    ./out/devices-bt.md
+                    ./out/devices-modbus.md
 
     deploy:
         environment:

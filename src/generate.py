@@ -8,6 +8,7 @@ from generator import (
     read_enum_csv,
     read_translations_csv,
 )
+from generator.markdown import generate_md
 from generator.pdf import generate_pdf
 
 if __name__ == "__main__":
@@ -35,3 +36,5 @@ if __name__ == "__main__":
         json.dump(translations, f, indent=2)
 
     generate_pdf(protocols, translations)
+
+    generate_md(protocols, devices, translations)

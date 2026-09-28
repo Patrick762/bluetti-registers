@@ -9,7 +9,7 @@ def generate_md(
     translations: dict[str, dict[str, str]],
 ):
     t_en = translations["en"]
-    
+
     bt_devices = []
     bt_devices_sections = []
     modbus_devices = []

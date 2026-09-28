@@ -1,4 +1,5 @@
 from __future__ import annotations
+import collections
 from dataclasses import dataclass, field
 import datetime
 
@@ -58,19 +59,24 @@ def generate_pdf(
     pdf = CustomPDF()
 
     # generate field names for table of contents
-    field_names: list[str] = []
+    field_names: dict[str, bool] = {}
 
     for proto in protocols:
         for field in proto.fields:
-            if field.name not in field_names:
-                field_names.append(field.name)
+            if field.name not in field_names.keys():
+                field_names[field.name] = field.writable
 
-    field_names = sorted(field_names, key=str.lower)
+    field_names = collections.OrderedDict(sorted(field_names.items()))
 
     fields_per_page = 4
     contents[2].subs = [
-        ContentTopic(f"3.{str(i+1)} {f}", 8 + (i // fields_per_page))
-        for i, f in enumerate(field_names)
+        ContentTopic(
+            f"3.{str(i+1)} {f}{' (writable)' if writable else ''}",
+            8 + (i // fields_per_page),
+            25,
+            20 + (i % fields_per_page) * 65,
+        )
+        for i, (f, writable) in enumerate(field_names.items())
     ]
 
     _cover_sheet(pdf)
@@ -243,7 +249,9 @@ def _add_field(
 ):
     pdf.set_xy(20, y)
     pdf.set_font("Helvetica", size=18)
-    pdf.cell(text=f"3.{str(i+1)} {field_name}")
+    pdf.cell(
+        text=f"3.{str(i+1)} {field_name}{' (writable)' if f[0].fields[0].writable else ''}"
+    )
 
     pdf.set_xy(25, y + 10)
     pdf.set_font("Helvetica", size=14)
